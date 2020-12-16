@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name = "viewport"
+			content="width=device-width, 
+			initial-scale=1.0">
+		<style>
+			html, body{
+			padding: 0px;
+			margin: 0px;
+			font-family: 'Montserrat', sans-serif, monospace;
+			overflow: hidden;
+			}
+			#kalsang{
+			position: absolute;
+			width: 100vw;
+			bottom: 0;
+			z-index: 10;
+			max-height: 100vh;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			user-select: none;
+			}
+			#topBG{
+			background-color: black;
+			transition: 2s ease;
+			height: 100vh;
+			}
+			#topText{
+			position: absolute;
+			top: -8px;
+			left: 10px;
+			font-weight: 900;
+			font-size: 9vw;
+			transition: 2s ease;
+			padding-right: 1vw;
+			display: "";
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			user-select: none;
+			font-family: 'Share Tech Mono', monospace;
+			height: auto;
+			border: 8px solid;
+			}
+			#arrow{
+			position: absolute;
+			bottom: 2vw;
+			right: 20px;
+			height: 80px;
+			width: 80px;
+			text-align: center;
+			color: black;
+			z-index: 10;
+			font-size: 80px;
+			border: 5px solid;
+			border-radius: 50%;
+			transition: 2s ease;
+			}
+			@media (min-width: 600px) {
+			#arrow:hover{
+			transform: rotate(360deg);
+			}
+			}
+			#resumeHolder{
+			position: absolute;
+			top: 100vh;
+			height: 100vh;
+			width: 100vw;
+			transition: .5s ease;
+			z-index: 11;
+			overflow-y: scroll;
+			background-color: rgb(253, 255, 245);
+			overflow-x: hidden;
+            scroll-behavior: smooth;
+			}
+			#head{
+			color: black;
+			font-size: 3.5rem;
+			height: auto;
+			font-weight: bold;
+			padding: 3vw;
+			font-family: 'Suez One', serif;
+			}
+			#aboutBox{
+			color: black;
+			font-family: 'Righteous', cursive;
+			font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+			align-content: center;
+			align-items: center;
+			}
+			#aboutTxt{
+			width: 93vw;
+			height: auto;
+            padding: 3vw;
+
+			}
+
+            #logo{
+                    font-size: 20vw;
+                    width: 100vw;
+                }
+
+            .arrow-down {
+            width: 0; 
+            height: 0; 
+            position: absolute;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 30px solid red;
+            left: 5vw;
+            }
+
+			#map{
+			width: 100;
+			font-size: 1.2rem;
+			column-span: 1;
+            padding-top: 5vh;
+            padding-right: 6vw;
+			text-align: right;
+			}
+
+			@media (min-width: 750px){
+                #aboutBox{
+                    flex-direction: row;
+					font-size: 1.5rem;
+                }
+                #aboutTxt{
+                width: 40vw;
+                }
+                #logo{
+                    font-size: 11vw;
+                    width: 42vw;
+                }
+                #map{
+                    text-align: left;
+					padding-left: 10vw;
+					padding-top: 0;
+					left: 10vw;
+                }
+                .arrow-down{
+                    left: 49vw;
+				}
+			}
+
+			@media (max-width: 900px){
+				#logo{
+				font-size: 13vw;
+				}
+			}
+
+
+            #projects{
+                font-family: 'Righteous', cursive;
+                overflow: hidden;
+            }
+			@media (min-width: 600px) {
+                #projects{
+                text-align: center;
+                width: 30vw;
+                font-size: 6vh;
+                line-height: 25vh;
+                }
+			}
+			#projImg{
+			width: 69vw;
+			}
+
+			.resume {
+			grid-template-columns: 1fr;
+			padding-left: 1rem;
+			width: 100vw;
+			grid-template-areas:
+			"muleworks"
+			"idtech"
+			"sat"
+			"homework"
+			"CCC";
+			} 
+			@media (min-width: 600px) {
+                .resume {
+                display: grid;
+                width: 100vw;
+                height: auto;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows   : 1fr 1fr 1fr 1fr;
+                grid-gap             : 5px;
+                grid-template-areas  :
+                "muleworks  img1"
+                "idtech     img2"
+                "sat        img3"
+                "homework   img4"
+                "CCC        img5";
+                }
+			}
+			h1{
+			color: black;
+			margin-left: -1rem;
+			font-size:1.2rem;
+			font-weight: 900;
+			margin: 0;
+			}
+			h2{
+			font-size:1rem;
+			margin-left: .5rem;
+			}
+			p{
+			color: black;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.5;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Suez+One&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id = "topBG">
+		<img id = "kalsang" src="resources/kalsang2.svg">
+		<div id = "topText">jc</div>
+		</img>
+		<a href="#" onclick="pullres()">
+			<div id = "arrow">↓</div>
+		</a>
+		<div id = "resumeHolder">
+			<div style="height: 100vh; vertical-align: middle; transform: translateY(4vw);">
+				<div id = "head">Jon Curtis</div>
+				<div id = "aboutBox">
+					<div id = "aboutTxt">I'm a first year student at colby college concentrating on CS and Russian. 
+						X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+					</div>
+					<div id = "map">
+						Most recent clickable item:
+						<a href="https://joncur.us/map-the-world" target="_blank" style="text-decoration: none; width: auto;">
+							<div id ="logo" style="
+								font-family: 'Squada One', cursive; 
+								text-emphasis-color: gray; 
+								text-shadow: red 4px 3px 0; 
+								font-weight:bold; 
+								z-index: 6; 
+								overflow:visible;
+								-webkit-touch-callout: none;
+								-webkit-user-select: none;
+								-khtml-user-select: none;
+								-moz-user-select: none;
+								-ms-user-select: none;
+								user-select: none;
+								line-height: .8;
+								color:rgb(54, 54, 54);
+								">MAP THE<br>WORLD</div>
+						</a>
+					</div>
+                </div>
+                <a href="#projects"><div class ="arrow-down" style="bottom: 11vh;"></div></a>
+			</div>
+			<div style="height: 100vh; width: 100vw;             flex-direction: row;
+				display: flex;
+				position: relative;
+				align-items: center;
+				justify-content: center;
+                ">
+				<div id="projects">
+					photos <br>
+					cg art <br>
+					web <br>
+					resume <br>
+				</div>
+				<div id ="projImg">
+					<img src="resources/photos1.JPG" style ="max-width: 80%; max-height: 80%;">
+                </div>
+                <a href="#resume"><div class ="arrow-down" style="bottom: 7vh; left: 49vw;"></div></a>
+			</div>
+			<article id = "resume" class="resume">
+				<section class="grid-area muleworks">
+					<h1>MuleWorks</h1>
+					<h2>October 2019 - Present; Colby College, Waterville, ME</h2>
+					I quickly got a job here at Colby working in the student MakerSpace.
+				</section>
+				<section class="grid-area img1">
+				</section>
+				<section class="grid-area idtech">
+					<h1>iD Tech Camp MIT / Camp counselor</h1>
+					<h2>June – August 2019;  MIT Campus, Cambridge, MA</h2>
+					This past summer I worked with young kids, teaching them video editing and game design in an atypical classroom setting.
+				</section>
+				<section class="grid-area img2">
+				</section>
+				<section class="grid-area sat">
+					<h1>Sierra at Tahoe / CSIA Level 2 Ski Instructor</h1>
+					<h2>March – April 2019;  Twin Bridges, CA</h2>
+					I found a place to rent out in Tahoe and taught skiing to some little rippers aged 4-12.
+					<br>-"Rookie Ski Instructor of the Year."
+					<br>-Outstanding service award.
+				</section>
+				<section class="grid-area img3">
+				</section>
+				<section class="grid-area homework">
+					<h1>Homework Project / Proctor</h1>
+					<h2>September 2017 – June 2018;  Commonwealth School, Boston, MA</h2>
+					During senior year I mentored younger students after school on time management and organization.
+				</section>
+				<section class="grid-area img4">
+				</section>
+				<section class="grid-area CCC">
+					<h1>Cambridge Community Center / Design team member </h1>
+					<h2>June – August 2017;  Cambridge, MA</h2>
+					Through a town-funded program, I was able to join a team responisble for designing and implementing a vertical garden for the center’s yard, based on ideas from coworkers and kids.
+					We also worked on sample engineering challenges presented by the job supervisor, such as waste-water runoff and urban farming. 
+				</section>
+				<section class="grid-area img5">
+				</section>
+			</article>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"type="text/javascript"></script> 
+		<script>
+			/* BG cycle*/ 
+			var i = 0;
+			var b = 0;
+			function change() {
+			   var color = ["white", "skyblue", "black", "lightsalmon", "slategray"];
+			   document.getElementById("topBG").style.backgroundColor = color[i];
+			   i = (i + 1) % color.length;
+			   var color = ["black", "lightsalmon", "white", "skyblue", "orange"];
+			   var colorA = ["darkgray", "lightsalmon", "white", "skyblue", "orange"]
+			   var text = ["skier", "technophile", "student", "photographer", "maker", "breaker"]
+			   document.getElementById("topText").style.color = color[b];
+			   document.getElementById("arrow").style.color = colorA[b];
+			   b = (b + 1) % color.length;
+			}
+			setInterval(change, 3500);
+			
+			/* Pull content*/
+			function pullres() {
+			    document.getElementById("resumeHolder").style.top = 0;
+			}
+		</script>
+	</body>
+</html>
