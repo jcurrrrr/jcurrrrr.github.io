@@ -68,7 +68,7 @@
 
          const apiKey = 'AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c';
          const infoWindow = new google.maps.InfoWindow();
-         
+
          // Show the information for a store when its marker is clicked.
          map.data.addListener('click', (event) => {
             const category = event.feature.getProperty('category');
@@ -97,14 +97,6 @@
          center: pos,
          zoom: 7
          });
-
-         // Display an InfoWindow at the map center
-         infoWindow.setPosition(pos);
-         infoWindow.setContent(browserHasGeolocation ?
-         'Geolocation permissions denied. Using default location.' :
-         'Error: Your browser doesn\'t support geolocation.');
-         infoWindow.open(map);
-         currentInfoWindow = infoWindow;
 
          // TODO: Step 3B3, Call the Places Nearby Search
       }
