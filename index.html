@@ -4,8 +4,8 @@
       <meta charset="utf-8"/>
       <title>Map the World</title>
       <link rel="icon" href="https://sites.google.com/site/jmckmls/kml/logo.png">
-      
-      <style>
+
+      <style> #Hello
          html, body {
          	height: 300vh;
          	width: 100vw;
@@ -21,16 +21,16 @@
          }
          #head{
             position: absolute;
-            width:auto;  
+            width:auto;
             height: auto;
             top: -10vh;
-            font-family: 'Squada One', cursive; 
+            font-family: 'Squada One', cursive;
             color:rgb(54, 54, 54);
             text-emphasis-color: gray;
-            font-size: 10vh;  
-            text-shadow: red 4px 3px 0; 
-            font-weight:bold; 
-            z-index: 6; 
+            font-size: 10vh;
+            text-shadow: red 4px 3px 0;
+            font-weight:bold;
+            z-index: 6;
             overflow:visible;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -52,7 +52,7 @@
             font-size: 7vh;
             writing-mode: vertical-lr;
             text-orientation: upright;
-            text-shadow: red 0px 0px 0; 
+            text-shadow: red 0px 0px 0;
             mix-blend-mode: lighten;
             letter-spacing: 1px;
          }
@@ -70,7 +70,7 @@
             text-align: center justify;
             font-family: 'Montserrat', sans-serif;
             overflow: scroll;
-            
+
          }
             #project {
                width: 60vw;
@@ -79,7 +79,7 @@
                padding-bottom:100px;
             }
 
-         
+
          #menuPull {
             height: 8vh;
             width: 8vh;
@@ -115,7 +115,7 @@
          #dot:hover i{
             margin-top: 25%;
             margin-left: 22%;
-            
+
             transform: rotate(315deg);
          }
          #jumpTop:hover{
@@ -156,7 +156,7 @@
             width: 100vw;
             overflow: hidden;
          }
-         
+
          #outer {
             height: 100vh;
             width: 100vw;
@@ -167,7 +167,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            font-family: 'Montserrat', sans-serif; 
+            font-family: 'Montserrat', sans-serif;
             font-weight: 900;
             background: white;
             color: black;
@@ -195,7 +195,7 @@
             padding-right: 2vw;
             font-size: 2vw;
             }
-         
+
          #image {
             height: 100vh;
             width: 100vw;
@@ -281,7 +281,7 @@
                transform: rotate(-45deg);
                z-index: 10;
                transition: .2s;
-               
+
             }
 
          #jumpTop {
@@ -308,9 +308,9 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
    </head>
-   
+
    <body>
-      
+
       <div id="head">
          <a href="https://joncur.us"><div id = "home">┘</div></a>
          <p>
@@ -323,25 +323,25 @@
          <p style="margin: 0em;"><img src="https://sites.google.com/site/jmckmls/kml/redIcon2.png" alt="red icon" height = "32" width ="32"style="vertical-align:middle; padding-bottom: 4px"></img>Natural sites</p>
          <p style="margin: 0em; margin-bottom: 5px;"><img src="https://sites.google.com/site/jmckmls/kml/blueIcon2.png" alt="blue icon" height = "32" width ="32"style="vertical-align:middle; padding-bottom: 4px"></img>Mixed sites</p>
          <p style="margin: 0em; margin-bottom: -10px;">If an image is incorrect or poorly formatted <a href="mailto:joncurtis2000@gmail.com" subject="this picture is garbo" style="color: rgb(159, 181, 228);" target="_blank">hit my gmail.</a></p>
-         
-         <h1>How it works</h1>To begin this project, I borrowed a spreadsheet of Heritage Site information. 
-         I fed a list of all site names into a modified version of Hardik Vasa's "Google Image Download" python script, which records the top Google image result for a search term. I attached those image links to the relavent site in the spreadsheet. 
+
+         <h1>How it works</h1>To begin this project, I borrowed a spreadsheet of Heritage Site information.
+         I fed a list of all site names into a modified version of Hardik Vasa's "Google Image Download" python script, which records the top Google image result for a search term. I attached those image links to the relavent site in the spreadsheet.
          <p>I converted that spreadsheet into a KML file and overlayed it on a Google map, added a listener and yeah that's it.
          </p>
          <h1>Credits</h1><p>- UNESCO for the datasheet</p>- Hardik Vasa for the <a href="https://github.com/hardikvasa/google-images-download" target="_blank" style="color: rgb(159, 181, 228);"> python script.</a><p>- The photographers who's images are here. Sorry I'm unable to give better credit.</p> <p>- StackOverflow for teaching me HTML <br>&nbsp; </p>
       </div>
    </div>
-      
 
-      
+
+
       <div id = "image"></div>
       <a id = "creditLink" href = ""> <div id = "credit"></div></a>
       <div id= "section1"></div>
-      
+
       <div id="section2">
          <div id = "outer">
             <div id = "title">click above</div>
-            <div id = "country"></div>   
+            <div id = "country"></div>
          </div>
       </div>
          <div id="section3">
@@ -349,11 +349,11 @@
             <span id = "txtSpan">click above</span>
             <a id = "more" href="google.com" target="_blank"><div id = "seeMore" href = "#section1">see more</div></a><p></p>
          </div>
-     
+
       <a href="#" onclick="jump('#section1')"><div id="jumpTop"><i></i></div></a>
       <a href="#" onclick="return false;"><div id="dot" onclick="openInfo()"><i></i></div></a>
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"type="text/javascript"></script> 
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"type="text/javascript"></script>
       <script>
          var savedSites = new Array();
 
@@ -396,13 +396,13 @@
          function initMap() {
          		var center = {lat: 28.328154, lng: -33.721346};
          		map = new google.maps.Map(document.getElementById('section1'), {
-					center:center, 
-					zoom:10, 
+					center:center,
+					zoom:10,
 					gestureHandling:'greedy',
                disableDefaultUI: true,
                styles: [ { elementType: "geometry", stylers: [ { color: "#ebe3cd" } ] }, { elementType: "labels.text.fill", stylers: [ { color: "#523735" } ] }, { elementType: "labels.text.stroke", stylers: [ { color: "#f5f1e6" } ] }, { featureType: "administrative", elementType: "geometry.stroke", stylers: [ { color: "#c9b2a6" } ] }, { featureType: "administrative.land_parcel", elementType: "geometry.stroke", stylers: [ { color: "#dcd2be" } ] }, { featureType: "administrative.land_parcel", elementType: "labels", stylers: [ { "visibility": "off" } ] }, { featureType: "administrative.land_parcel", elementType: "labels.text.fill", stylers: [ { color: "#ae9e90" } ] }, { featureType: "landscape.natural", elementType: "geometry", stylers: [ { color: "#dfd2ae" } ] }, { featureType: "poi", elementType: "geometry", stylers: [ { color: "#dfd2ae" } ] }, { featureType: "poi", elementType: "labels.text", stylers: [ { "visibility": "off" } ] }, { featureType: "poi", elementType: "labels.text.fill", stylers: [ { color: "#93817c" } ] }, { featureType: "poi.business", stylers: [ { "visibility": "off" } ] }, { featureType: "poi.park", elementType: "geometry.fill", stylers: [ { color: "#a5b076" } ] }, { featureType: "poi.park", elementType: "labels.text.fill", stylers: [ { color: "#447530" } ] }, { featureType: "road", elementType: "geometry", stylers: [ { color: "#f5f1e6" } ] }, { featureType: "road", elementType: "labels.icon", stylers: [ { "visibility": "off" } ] }, { featureType: "road.arterial", stylers: [ { "visibility": "off" } ] }, { featureType: "road.arterial", elementType: "geometry", stylers: [ { color: "#fdfcf8" } ] }, { featureType: "road.highway", elementType: "geometry", stylers: [ { color: "#f8c967" } ] }, { featureType: "road.highway", elementType: "geometry.stroke", stylers: [ { color: "#e9bc62" } ] }, { featureType: "road.highway", elementType: "labels", stylers: [ { "visibility": "off" } ] }, { featureType: "road.highway.controlled_access", elementType: "geometry", stylers: [ { color: "#e98d58" } ] }, { featureType: "road.highway.controlled_access", elementType: "geometry.stroke", stylers: [ { color: "#db8555" } ] }, { featureType: "road.local", stylers: [ { "visibility": "off" } ] }, { featureType: "road.local", elementType: "labels", stylers: [ { "visibility": "off" } ] }, { featureType: "road.local", elementType: "labels.text.fill", stylers: [ { color: "#806b63" } ] }, { featureType: "transit", stylers: [ { "visibility": "off" } ] }, { featureType: "transit.line", elementType: "geometry", stylers: [ { color: "#dfd2ae" } ] }, { featureType: "transit.line", elementType: "labels.text.fill", stylers: [ { color: "#8f7d77" } ] }, { featureType: "transit.line", elementType: "labels.text.stroke", stylers: [ { color: "#ebe3cd" } ] }, { featureType: "transit.station", elementType: "geometry", stylers: [ { color: "#dfd2ae" } ] }, { featureType: "water", elementType: "geometry.fill", stylers: [ { color: "#abccc2" } ] }, { featureType: "water", elementType: "labels.text.fill", stylers: [ { color: "#92998d" } ] } ]
          		});
-               
+
                var src1 ='https://sites.google.com/site/jmckmls/kml/WHList.kml';
          		var kmlLayer1 = new google.maps.KmlLayer({
                url : src1,
@@ -410,7 +410,7 @@
            		preserveViewport: false,
                map: map
          		});
-               
+
                /*
                var src2 = 'https://sites.google.com/site/jmckmls/kml/polys.kml';
          		var kmlLayer2 = new google.maps.KmlLayer({
@@ -421,14 +421,14 @@
                   clickable : false,
                });
                */
-          
+
                function jump(tar){
                   window.location.hash = tar;
                   history.replaceState(null, null, ' ');
                };
-               
+
          		kmlLayer1.addListener('click', function(event) {
-				      /* Clears previous image */ 
+				      /* Clears previous image */
                   document.getElementById('image').style.backgroundImage = "";
 
                   /* establishes data for info page */
@@ -440,8 +440,8 @@
 
                   /* adjusts font size based on width */
                   if (title.length >= 100) {
-                     document.getElementById('title').style.fontSize = "6vw";	
-                  }			      
+                     document.getElementById('title').style.fontSize = "6vw";
+                  }
                   if (title.length >= 70 && title.length < 100) {
                      document.getElementById('title').style.fontSize = "7vw"
                   }
@@ -456,13 +456,13 @@
                   }
                   if (title.length >= 5 && title.length < 10) {
                      document.getElementById('title').style.fontSize = "20vw"
-                  } 
+                  }
                   if (title.length > 0 && title.length < 5) {
                      document.getElementById('title').style.fontSize = "30vw"
-                  } 
+                  }
                   if (title=="Yakushima") {
                      document.getElementById('title').style.fontSize = "18vw"
-                  } 
+                  }
 
                   /* Updates page info */
                   document.getElementById('image').style.backgroundImage = "url("+link+")";
@@ -475,7 +475,7 @@
                   document.getElementById('s3Title').innerHTML = title;
                   document.getElementById('country').innerText = "⤙ " + country + " ⤚";
                   document.getElementById('more').setAttribute('href', "https://www.google.com/search?q=" + title);
-                  
+
                   jump('#section2');
                });
          };
