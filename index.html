@@ -56,11 +56,11 @@
                bounds.extend(pos);
          }, () => {
             // Browser supports geolocation, but user has denied permission
-            handleLocationError(true, infoWindow);
+            handleLocationError(true);
          });
          } else {
          // Browser doesn't support geolocation
-         handleLocationError(false, infoWindow);
+         handleLocationError(false);
          }
 
          // Load the stores GeoJSON onto the map.
@@ -90,7 +90,7 @@
       }
 
       // Handle a geolocation error
-      function handleLocationError(browserHasGeolocation, infoWindow) {
+      function handleLocationError(browserHasGeolocation) {
          // Set default location to Sydney, Australia
          pos = {lat: 52.632469, lng: -1.689423};
          const map = new google.maps.Map(document.getElementById('map'), {
