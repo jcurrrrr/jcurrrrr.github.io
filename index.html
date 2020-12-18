@@ -38,6 +38,12 @@
       let service;
       let infoPane;
       function initMap() {
+
+         bounds = new google.maps.LatLngBounds();
+         infoWindow = new google.maps.InfoWindow;
+         currentInfoWindow = infoWindow;
+
+         // Geolocate
          if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(position => {
             pos = {
@@ -45,8 +51,8 @@
             lng: position.coords.longitude
             };
             const map = new google.maps.Map(document.getElementById('map'), {
-            center: pos,
-            zoom: 15
+               center: pos,
+               zoom: 15
             });
             bounds.extend(pos);
 
@@ -94,9 +100,7 @@
          // Geolocation code
          
          // Initialize variables
-         bounds = new google.maps.LatLngBounds();
-         infoWindow = new google.maps.InfoWindow;
-         currentInfoWindow = infoWindow;
+         
          // TODO: Step 4A3: Add a generic sidebar
 
  
