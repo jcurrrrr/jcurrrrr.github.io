@@ -100,7 +100,7 @@
       function handleLocationError(browserHasGeolocation, infoWindow) {
          // Set default location to Sydney, Australia
          pos = {lat: 52.632469, lng: -1.689423};
-         map = new google.maps.Map(document.getElementById('map'), {
+         const map = new google.maps.Map(document.getElementById('map'), {
          center: pos,
          zoom: 7
          });
