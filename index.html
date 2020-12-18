@@ -9,7 +9,7 @@
       #map {
          height: 100%;
          width: 80%;
-         left: 20%;
+         left: 0%;
          background-color: grey;
       }
 
@@ -32,12 +32,45 @@
   <script>
       function initMap() {
          // Create the map.
+         const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 7,
+            center: {lat: 52.632469, lng: -1.689423},
+         });
 
-         const infoWindow = new google.maps.InfoWindow();
-         currentInfoWindow = infoWindow;
-         bounds = new google.maps.LatLngBounds();
+         // Load the stores GeoJSON onto the map.
+         map.data.loadGeoJson('stores.json', {idPropertyName: 'storeid'});
+
          const apiKey = 'AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c';
+         const infoWindow = new google.maps.InfoWindow();
 
+         // Show the information for a store when its marker is clicked.
+         map.data.addListener('click', (event) => {
+            const category = event.feature.getProperty('category');
+            const name = event.feature.getProperty('name');
+            const description = event.feature.getProperty('description');
+            const hours = event.feature.getProperty('hours');
+            const phone = event.feature.getProperty('phone');
+            const position = event.feature.getGeometry().get();
+            const content = `
+               <h2>${name}</h2><p>${description}</p>
+               <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
+            `;
+
+            infoWindow.setContent(content);
+            infoWindow.setPosition(position);
+            infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
+            infoWindow.open(map);
+         });
+
+         // Geolocation code
+         
+         // Initialize variables
+         bounds = new google.maps.LatLngBounds();
+         infoWindow = new google.maps.InfoWindow;
+         currentInfoWindow = infoWindow;
+         // TODO: Step 4A3: Add a generic sidebar
+
+ 
          if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(position => {
             pos = {
@@ -65,38 +98,8 @@
          handleLocationError(false, infoWindow);
          }
       }
-
-         // Load the stores GeoJSON onto the map.
-         map.data.loadGeoJson('C:\Users\Jonathan Curtis\Documents\GitHub\jcurrrrr.github.io\stores.json', {idPropertyName: 'storeid'});
-
-         
-         // Show the information for a store when its marker is clicked.
-         map.data.addListener('click', (event) => {
-            const category = event.feature.getProperty('category');
-            const name = event.feature.getProperty('name');
-            const description = event.feature.getProperty('description');
-            const hours = event.feature.getProperty('hours');
-            const phone = event.feature.getProperty('phone');
-            const position = event.feature.getGeometry().get();
-            const content = `
-               <h2>${name}</h2><p>${description}</p>
-               <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
-            `;
-
-            infoWindow.setContent(content);
-            infoWindow.setPosition(position);
-            infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
-            infoWindow.open(map);
-         });
-
-         //// Geolocation code
-         
-         // Initialize variables
-         // TODO: Step 4A3: Add a generic sidebar
-
- 
-         
       
+      /*
       // Handle a geolocation error
       function handleLocationError(browserHasGeolocation, infoWindow) {
          // Set default location to Sydney, Australia
@@ -118,6 +121,7 @@
          
       }
             //END TODO: Step 2, Geolocate your user
+      */
    </script>
 
 <!-- TODO: Step 1C, Get an API key -->
