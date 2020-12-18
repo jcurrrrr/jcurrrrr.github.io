@@ -40,8 +40,6 @@
       function initMap() {
 
          bounds = new google.maps.LatLngBounds();
-         infoWindow = new google.maps.InfoWindow;
-         currentInfoWindow = infoWindow;
 
          // Geolocate
          if (navigator.geolocation) {
@@ -56,12 +54,6 @@
                   zoom: 7
                });
                bounds.extend(pos);
-
-               infoWindow.setPosition(pos);
-               infoWindow.setContent('Location found.');
-               infoWindow.open(map);
-               map.setCenter(pos);
-
          }, () => {
             // Browser supports geolocation, but user has denied permission
             handleLocationError(true, infoWindow);
@@ -75,7 +67,8 @@
          map.data.loadGeoJson('stores.json', {idPropertyName: 'storeid'});
 
          const apiKey = 'AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c';
-
+         const infoWindow = new google.maps.InfoWindow();
+         
          // Show the information for a store when its marker is clicked.
          map.data.addListener('click', (event) => {
             const category = event.feature.getProperty('category');
