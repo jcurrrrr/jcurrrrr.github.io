@@ -12,6 +12,85 @@
          left: 0%;
          background-color: grey;
       }
+         /* Styling for address search bar on map (can be moved to side*/
+         #pac-card {
+            background-color: #fff;
+            border-radius: 2px 0 0 2px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            font-family: Roboto;
+            margin: 10px 10px 0 0;
+            -moz-box-sizing: border-box;
+            outline: none;
+         }
+         
+         #pac-container {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            margin-right: 12px;
+         }
+         
+         #pac-input {
+            background-color: #fff;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            margin-left: 12px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 400px;
+         }
+         
+         #pac-input:focus {
+            border-color: #4d90fe;
+         }
+         
+         #title {
+            color: #fff;
+            background-color: #acbcc9;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 6px 12px;
+         }
+         
+         .hidden {
+            display: none;
+         }
+
+         /* Styling for an info pane that slides out from the left. 
+         * Hidden by default. */
+         #panel {
+            height: 100%;
+            width: null;
+            background-color: white;
+            position: fixed;
+            z-index: 1;
+            overflow-x: hidden;
+            transition: all .2s ease-out;
+         }
+         
+         .open {
+            width: 250px;
+         }
+         
+         .place {
+            font-family: 'open sans', arial, sans-serif;
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-block-end: 0px;
+            padding-left: 18px;
+            padding-right: 18px;
+         }
+         
+         .distanceText {
+            color: silver;
+            font-family: 'open sans', arial, sans-serif;
+            font-size: 1em;
+            font-weight: 400;
+            margin-block-start: 0.25em;
+            padding-left: 18px;
+            padding-right: 18px;
+         }
 
       html, body {
          height: 100%;
@@ -33,8 +112,8 @@
       function initMap() {
          // Create the map.
          map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 7,
-            center: {lat: 52.632469, lng: -1.689423},
+            zoom: 8,
+            center: {lat: 42.360, lng: -71.0589},
          });
 
          const apiKey = 'AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c';
@@ -66,45 +145,56 @@
 
          // Try HTML5 geolocation
          if (navigator.geolocation) {
-         navigator.geolocation.getCurrentPosition(position => {
-            pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-            };
-            map.setCenter(pos);
-            bounds.extend(pos);
+            navigator.geolocation.getCurrentPosition(position => {
+               pos = {
+               lat: position.coords.latitude,
+               lng: position.coords.longitude
+               };
+               map.setCenter(pos);
+               map.setZoom(10);
+               bounds.extend(pos);
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
+               infoWindow.setPosition(pos);
+               infoWindow.setContent('Location found.');
+               infoWindow.open(map);
+               map.setCenter(pos);
 
-            /* TODO: Step 3B2, Call the Places Nearby Search */
-         }, () => {
-            // Browser supports geolocation, but user has denied permission
-            handleLocationError(true, infoWindow, map);
-         });
-         } else {
-         // Browser doesn't support geolocation
-         handleLocationError(false, infoWindow, map);
-         }
+            }, () => {
+               // Build and add the search bar
+               const card = document.createElement('div');
+               const titleBar = document.createElement('div');
+               const title = document.createElement('div');
+               const container = document.createElement('div');
+               const input = document.createElement('input');
+               const options = {
+                  types: ['address'],
+                  componentRestrictions: {country: 'gb'},
+               };
 
+               card.setAttribute('id', 'pac-card');
+               title.setAttribute('id', 'title');
+               title.textContent = 'Find the nearest strike';
+               titleBar.appendChild(title);
+               container.setAttribute('id', 'pac-container');
+               input.setAttribute('id', 'pac-input');
+               input.setAttribute('type', 'text');
+               input.setAttribute('placeholder', 'Enter an address');
+               container.appendChild(input);
+               card.appendChild(titleBar);
+               card.appendChild(container);
+               map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+
+               // Make the search bar into a Places Autocomplete search bar and select
+               // which detail fields should be returned about the place that
+               // the user selects from the suggestions.
+               const autocomplete = new google.maps.places.Autocomplete(input, options);
+
+               autocomplete.setFields(
+                     ['address_components', 'geometry', 'name']);
+            });
          // Load the stores GeoJSON onto the map.
          map.data.loadGeoJson('https://jcurrrrr.github.io/stores.json', {idPropertyName: 'storeid'});
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, map) {
-         // Set default location to Sydney, Australia
-         pos = {lat: 52.632469, lng: -1.689423};
-         map.setCenter(pos);
-
-         // Display an InfoWindow at the map center
-         infoWindow.setPosition(pos);
-         infoWindow.setContent(browserHasGeolocation ?
-         'Geolocation permissions denied. Using default location.' :
-         'Error: Your browser doesn\'t support geolocation.');
-         infoWindow.open(map);
-         currentInfoWindow = infoWindow;
+         }
       }
    </script>
 
