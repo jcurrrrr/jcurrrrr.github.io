@@ -1,9 +1,13 @@
+/************* TAG SELECTORS **********/
+
+
 body {
   background-color: #F7DAD9;
 }
 
 h1 {
-  color: #761D09;
+  color: #721906;
+  font-size: 50px;
 }
 
 hr {
@@ -12,4 +16,15 @@ hr {
   border-width: 0;
   height: 3px;
   width: 95%;
+}
+
+
+/***********CLASS SELECTORS ***********/
+
+.subHead{
+  font-size: 25px;
+}
+.headText{
+  font-family: Arial;
+  font-size: 15px;
 }
