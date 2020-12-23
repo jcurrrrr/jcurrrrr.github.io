@@ -10,6 +10,7 @@ h1 {
   font-size: 50px;
   margin: 15px 0 15px 0;
   display: inline-block;
+  padding-top: 15px;
 }
 
 hr {
@@ -29,6 +30,7 @@ textarea{
 
 .topbanner{
   text-align: center;
+  vertical-align: top;
 }
 
 
