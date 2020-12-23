@@ -6,110 +6,45 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
   <style>
-      #map {
-         height: 100%;
-         width: 80%;
-         left: 20%;
-         background-color: grey;
-      }
-         /* Styling for address search bar on map (can be moved to side*/
-         #pac-card {
-            background-color: #fff;
-            border-radius: 2px 0 0 2px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            box-sizing: border-box;
-            font-family: Roboto;
-            margin: 10px 10px 0 0;
-            -moz-box-sizing: border-box;
-            outline: none;
-         }
-         
-         #pac-container {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            margin-right: 12px;
-         }
-         
-         #pac-input {
-            background-color: #fff;
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 300;
-            margin-left: 12px;
-            padding: 0 11px 0 13px;
-            text-overflow: ellipsis;
-            width: 400px;
-         }
-         
-         #pac-input:focus {
-            border-color: #4d90fe;
-         }
-         
-         #title {
-            color: #fff;
-            background-color: #acbcc9;
-            font-size: 18px;
-            font-weight: 400;
-            padding: 6px 12px;
-         }
-         
-         .hidden {
-            display: none;
-         }
-
-         /* Styling for an info pane that slides out from the left. 
-         * Hidden by default. */
-         #panel {
-            height: 100%;
-            width: null;
-            background-color: white;
-            position: fixed;
-            z-index: 1;
-            overflow-x: hidden;
-            transition: all .2s ease-out;
-         }
-         
-         .open {
-            width: 250px;
-         }
-         
-         .place {
-            font-family: 'open sans', arial, sans-serif;
-            font-size: 1.2em;
-            font-weight: 500;
-            margin-block-end: 0px;
-            padding-left: 18px;
-            padding-right: 18px;
-         }
-         
-         .distanceText {
-            color: silver;
-            font-family: 'open sans', arial, sans-serif;
-            font-size: 1em;
-            font-weight: 400;
-            margin-block-start: 0.25em;
-            padding-left: 18px;
-            padding-right: 18px;
-         }
-
       html, body {
          height: 100%;
          margin: 0;
          padding: 0;
       }
 
-    /* TODO: Step 4A1: Make a generic sidebar. */
+      #column {
+         width: 20%;
+         height: 100%;
+      }
+      
+      #map {
+         height: 100%;
+         width: 80%;
+         background-color: grey;
+         float: right;
+      }
+
+      input {
+         padding-top: 40vh;
+         box-sizing: border-box; 
+         width: 20%;
+         float: left;
+         outline: solid black 4px;
+      }
+
   </style>
+  
 </head>
 
 <body>
-  <!-- TODO: Step 4A2: Add a generic sidebar -->
-
-  <!-- Map appears here -->
-  <div id="map"></div>
-
-  <script>
-      function initMap() {
+   
+   <input type = "text" name ="Full Name" placeholder="enter zip">
+   <div id="map"></div>
+   
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script>
+      async function initMap() {
          // Create the map.
          map = new google.maps.Map(document.getElementById('map'), {
             zoom: 8,
@@ -119,29 +54,7 @@
          const apiKey = 'AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c';
          const infoWindow = new google.maps.InfoWindow();
 
-         // Show the information for a store when its marker is clicked.
-         map.data.addListener('click', (event) => {
-            const category = event.feature.getProperty('category');
-            const name = event.feature.getProperty('name');
-            const description = event.feature.getProperty('description');
-            const hours = event.feature.getProperty('hours');
-            const phone = event.feature.getProperty('phone');
-            const position = event.feature.getGeometry().get();
-            const content = `
-               <h2>${name}</h2><p>${description}</p>
-               <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
-            `;
-
-            infoWindow.setContent(content);
-            infoWindow.setPosition(position);
-            infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
-            infoWindow.open(map);
-         });
-
-         // Initialize variables
          bounds = new google.maps.LatLngBounds();
-         currentInfoWindow = infoWindow;
-         /* TODO: Step 4A3: Add a generic sidebar */
 
          // Try HTML5 geolocation
          if (navigator.geolocation) {
@@ -160,41 +73,41 @@
                map.setCenter(pos);
 
             }, () => {
-               // Build and add the search bar
-               const card = document.createElement('div');
-               const titleBar = document.createElement('div');
-               const title = document.createElement('div');
-               const container = document.createElement('div');
-               const input = document.createElement('input');
-               const options = {
-                  types: ['address'],
-                  componentRestrictions: {country: 'gb'},
-               };
-
-               card.setAttribute('id', 'pac-card');
-               title.setAttribute('id', 'title');
-               title.textContent = 'Find the nearest strike';
-               titleBar.appendChild(title);
-               container.setAttribute('id', 'pac-container');
-               input.setAttribute('id', 'pac-input');
-               input.setAttribute('type', 'text');
-               input.setAttribute('placeholder', 'Enter an address');
-               container.appendChild(input);
-               card.appendChild(titleBar);
-               card.appendChild(container);
-               map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
-
-               // Make the search bar into a Places Autocomplete search bar and select
-               // which detail fields should be returned about the place that
-               // the user selects from the suggestions.
-               const autocomplete = new google.maps.places.Autocomplete(input, options);
-
-               autocomplete.setFields(
-                     ['address_components', 'geometry', 'name']);
+               // add window that points to zip entry
             });
          // Load the stores GeoJSON onto the map.
-         map.data.loadGeoJson('https://jcurrrrr.github.io/stores.json', {idPropertyName: 'storeid'});
          }
+
+
+
+         const response = await fetch('https://jcurrrrr.github.io/stores.json');
+         var json = require('https://jcurrrrr.github.io/stores.json');
+         console.log(json);
+         //map.data.loadGeoJson('https://jcurrrrr.github.io/stores.json')
+
+         $.each(json.features, function(key, data){
+            alert(data);
+         });
+         
+         
+         // Show the information for a store when its marker is clicked.
+         map.data.addListener('click', (event) => {
+            const category = event.feature.getProperty('category');
+            const name = event.feature.getProperty('name');
+            const description = event.feature.getProperty('description');
+            const hours = event.feature.getProperty('hours');
+            const phone = event.feature.getProperty('phone');
+            const position = event.feature.getGeometry().get();
+            const content = `
+               <h2>${name}</h2><p>${description}</p>
+               <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
+            `;
+
+            infoWindow.setContent(content);
+            infoWindow.setPosition(position);
+            infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
+            infoWindow.open(map);
+         });
       }
    </script>
 
