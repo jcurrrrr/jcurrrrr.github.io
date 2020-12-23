@@ -24,7 +24,7 @@
          float: right;
       }
 
-      input {
+      .search {
          box-sizing: border-box; 
          width: 90%;
          outline: solid black 2px;
@@ -37,8 +37,15 @@
    
    <div style="float: left; padding-top: 40vh; width: 20%;">
       <form id = "search">
-         <input id = "zipsearch" type = "text" name ="Full Name" placeholder="enter zip">
-         <input id = "radsearch" type = "text" name ="Full Name" placeholder="enter radius (mi)">
+         <input id = "zipsearch" class = "search" type = "text" name ="Full Name" placeholder="enter zip">
+         <input id = "radsearch" class = "search" type = "text" name ="Full Name" placeholder="enter radius (mi)">
+         
+         <h3>action</h3>
+         <input type="checkbox"> incarceration <br>
+         <input type="checkbox"> union <br>
+         <input type="checkbox"> racial justice <br>
+         <input type="checkbox"> housing <br>
+
          <button type = "submit">search</button>
       </form>
    </div>
@@ -136,14 +143,29 @@
             $.getJSON(jsonURL, function(json) {
                var i;
                for (i = 0; i < json.features.length; i++) {
-                  currEntry = json.features[i].properties;
-                  latlng = new google.maps.LatLng(currEntry.coordinates[1], currEntry.coordinates[0]);
-                  dist = google.maps.geometry.spherical.computeDistanceBetween(center, latlng);
+                  var currEntry = json.features[i].properties;
+                  var latlng = new google.maps.LatLng(currEntry.coordinates[1], currEntry.coordinates[0]);
+                  var dist = google.maps.geometry.spherical.computeDistanceBetween(center, latlng);
+                  
+
                   if (dist < radius) {
+                     var cat = currEntry.category;
+                     var icon;
+                     console.log(cat);
+                     if (cat == "incarceration") {
+                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' } 
+                     } else if (cat == "union") {
+                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/pink-dot.png' } 
+                     } else if (cat == "racial justice") { 
+                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' } 
+                     } else {
+                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' } 
+                     }
                      var marker = new google.maps.Marker({
                         position: latlng,
                         map: map,
                         title: currEntry.name,
+                        icon: icon,
                      });
 
                      markers.push(marker);
