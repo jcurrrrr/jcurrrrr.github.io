@@ -2,13 +2,6 @@
     "type": "FeatureCollection",
     "features": [
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.00326538085938,
-            42.24478535602799
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -20,13 +13,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.05167388916014,
-            42.33849874073358
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -38,13 +24,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.42005920410156,
-            41.81687299570986
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -56,13 +35,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.51069641113281,
-            41.70777900286713
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -74,13 +46,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.12377166748047,
-            42.33494576417536
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -92,13 +57,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.05991363525389,
-            42.36209556053167
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -110,13 +68,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.08085632324219,
-            42.3189548855809
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "patisserie",
@@ -128,13 +79,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.06060028076172,
-            42.350932577852824
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "cafe",
@@ -146,13 +90,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.07364654541016,
-            42.33621470741859
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "cafe",
@@ -164,13 +101,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.40289306640624,
-            41.8304327479416
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "cafe",
@@ -182,14 +112,7 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.09321594238281,
-            42.33316920061985
-          ]
-        },
-        "type": "Feature",
+       "type": "Feature",
         "properties": {
           "category": "cafe",
           "hours": "8am - 9:30pm",
@@ -200,13 +123,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.43173217773438,
-            41.81533774847465
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "cafe",
@@ -218,13 +134,6 @@
         }
       },
       {
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -71.42520904541016,
-            41.832735062152615
-          ]
-        },
         "type": "Feature",
         "properties": {
           "category": "cafe",
