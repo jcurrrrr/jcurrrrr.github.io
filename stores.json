@@ -9,7 +9,11 @@
           "description": "Modern twists on classic pastries. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Mayfair",
           "phone": "+44 20 1234 5678",
-          "storeid": "01"
+          "storeid": "01",
+          "coordinates": [
+            -71.00326538085938,
+            42.24478535602799
+          ]
         }
       },
       {
@@ -20,7 +24,11 @@
           "description": "Come and try our award-winning cakes and pastries. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Bristol",
           "phone": "+44 117 121 2121",
-          "storeid": "02"
+          "storeid": "02",
+          "coordinates": [
+            -71.05167388916014,
+            42.33849874073358
+          ]
         }
       },
       {
@@ -31,7 +39,11 @@
           "description": "Whatever the occasion, whether it's a birthday or a wedding, Josie's Patisserie has the perfect treat for you. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Norwich",
           "phone": "+44 1603 123456",
-          "storeid": "03"
+          "storeid": "03",
+          "coordinates": [
+            -71.42005920410156,
+            41.81687299570986
+          ]
         }
       },
       {
@@ -42,7 +54,11 @@
           "description": "A gourmet patisserie that will delight your senses. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Wimborne",
           "phone": "+44 1202 343434",
-          "storeid": "04"
+          "storeid": "04",
+          "coordinates": [
+            -71.51069641113281,
+            41.70777900286713
+          ]
         }
       },
       {
@@ -53,7 +69,11 @@
           "description": "Spoil yourself or someone special with our classic pastries. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Liverpool",
           "phone": "+44 151 444 4444",
-          "storeid": "05"
+          "storeid": "05",
+          "coordinates": [
+            -71.12377166748047,
+            42.33494576417536
+          ]
         }
       },
       {
@@ -64,7 +84,11 @@
           "description": "Come and feast your eyes and tastebuds on our delicious pastries and cakes. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Tamworth",
           "phone": "+44 5555 55555",
-          "storeid": "06"
+          "storeid": "06",
+          "coordinates": [
+            -71.05991363525389,
+            42.36209556053167
+          ]
         }
       },
       {
@@ -75,7 +99,11 @@
           "description": "Josie's Patisserie is family-owned, and our delectable pastries, cakes, and great coffee are renowed. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Cardiff",
           "phone": "+44 29 6666 6666",
-          "storeid": "07"
+          "storeid": "07",
+          "coordinates": [
+            -71.08085632324219,
+            42.3189548855809
+          ]
         }
       },
       {
@@ -86,7 +114,11 @@
           "description": "Oakham's favorite spot for fresh coffee and delicious cakes. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Oakham",
           "phone": "+44 7777 777777",
-          "storeid": "08"
+          "storeid": "08",
+          "coordinates": [
+            -71.06060028076172,
+            42.350932577852824
+          ]
         }
       },
       {
@@ -97,7 +129,11 @@
           "description": "Enjoy freshly brewed coffe, and home baked cakes in our homely cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Blackburn",
           "phone": "+44 8888 88888",
-          "storeid": "09"
+          "storeid": "09",
+          "coordinates": [
+            -71.07364654541016,
+            42.33621470741859
+          ]
         }
       },
       {
@@ -108,18 +144,26 @@
           "description": "A delicious array of pastries with many flavours, and fresh coffee in an snug cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Crawley",
           "phone": "+44 1010 101010",
-          "storeid": 10
+          "storeid": 10,
+          "coordinates": [
+            -71.40289306640624,
+            41.8304327479416
+          ]
         }
       },
       {
-       "type": "Feature",
+        "type": "Feature",
         "properties": {
           "category": "cafe",
           "hours": "8am - 9:30pm",
           "description": "Grab a freshly brewed coffee, a decadent cake and relax in our idyllic cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Brighton",
           "phone": "+44 1313 131313",
-          "storeid": 11
+          "storeid": 11,
+          "coordinates": [
+            -71.09321594238281,
+            42.33316920061985
+          ]
         }
       },
       {
@@ -130,7 +174,11 @@
           "description": "Come in and unwind at this idyllic cafe with fresh coffee and home made cakes. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Newtown",
           "phone": "+44 1414 141414",
-          "storeid": 12
+          "storeid": 12,
+          "coordinates": [
+            -71.43173217773438,
+            41.81533774847465
+          ]
         }
       },
       {
@@ -141,7 +189,11 @@
           "description": "Fresh coffee and delicious cakes in an snug cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Ipswich",
           "phone": "+44 1717 17171",
-          "storeid": 13
+          "storeid": 13,
+          "coordinates": [
+            -71.42520904541016,
+            41.832735062152615
+          ]
         }
       }
     ]
