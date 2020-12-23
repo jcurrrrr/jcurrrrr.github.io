@@ -8,6 +8,8 @@ body {
 h1 {
   color: #721906;
   font-size: 50px;
+  margin: 15px 0 15px 0;
+  display: inline-block;
 }
 
 hr {
@@ -18,15 +20,32 @@ hr {
   width: 95%;
 }
 
+textarea{
+  width: 90%;
+}
+
 
 /***********CLASS SELECTORS ***********/
 
+.topbanner{
+  text-align: center;
+}
+
+
 .subHead{
-  font-size: 25px;
+  font-size: 20px;
+  display: inline-block;
 }
 .headText{
   font-family: Arial;
   font-size: 15px;
+}
+
+.contactForm{
+  border: solid;
+  margin-left:500px;
+  padding-left:20px;
+  width: 30%;
 }
 
 /********ID Sectlors ********/
