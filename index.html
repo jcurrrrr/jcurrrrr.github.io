@@ -33,7 +33,6 @@
       }
 
   </style>
-  
 </head>
 
 <body>
@@ -75,21 +74,17 @@
             }, () => {
                // add window that points to zip entry
             });
-         // Load the stores GeoJSON onto the map.
          }
 
-
-
-         const response = await fetch('https://jcurrrrr.github.io/stores.json');
-         var json = require('https://jcurrrrr.github.io/stores.json');
-         console.log(json);
-         //map.data.loadGeoJson('https://jcurrrrr.github.io/stores.json')
-
-         $.each(json.features, function(key, data){
-            alert(data);
+         // Load the stores GeoJSON onto the map.
+         $.getJSON("https://jcurrrrr.github.io/stores.json", function(json) {
+            // var center = getLatLngByZipcode('02138');
+            var center = new google.maps.LatLng(42.3803, -71.1389)
+            
+            addPoints(map, infoWindow, json, center, 10000);
          });
          
-         
+         /*
          // Show the information for a store when its marker is clicked.
          map.data.addListener('click', (event) => {
             const category = event.feature.getProperty('category');
@@ -108,10 +103,67 @@
             infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
             infoWindow.open(map);
          });
+         */
+      }
+      
+      function addPoints(map, infowindow, json, center, radius) {
+         var i;
+         for (i = 0; i < json.features.length; i++) {
+            
+            currEntry = json.features[i].properties;
+            latlng = new google.maps.LatLng(currEntry.coordinates[1], currEntry.coordinates[0]);
+            dist = google.maps.geometry.spherical.computeDistanceBetween(center, latlng);
+            if (dist < radius) {
+               var marker = new google.maps.Marker({
+                  position: latlng,
+                  map: map,
+                  title: currEntry.name,
+               });
+            
+               bindInfoWindow(marker, map, infowindow, currEntry)
+            }
+         }
+      }
+
+      function bindInfoWindow(marker, map, infowindow, jsonEntry) {
+         google.maps.event.addListener(marker, 'click', function () {
+            const category = jsonEntry.category;
+            const name = jsonEntry.name;
+            const description = jsonEntry.description;
+            const hours = jsonEntry.hours;
+            const phone = jsonEntry.phone;
+            const pos = new google.maps.LatLng(jsonEntry.coordinates[1], jsonEntry.coordinates[0]);
+            const content = `
+               <h2>${name}</h2><p>${description}</p>
+               <p><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
+            `;
+
+            infowindow.setContent(content);
+            infowindow.setPosition(pos);
+            infowindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
+            infowindow.open(map);
+         });
+      }
+
+      function getLatLngByZipcode(zipcode) {
+         var geocoder = new google.maps.Geocoder();
+         var address = zipcode;
+         var latitude;
+         var longitude;
+         geocoder.geocode({ 'address': 'zipcode '+address }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                  latitude = results[0].geometry.location.lat();
+                  longitude = results[0].geometry.location.lng();
+                  console.log([latitude, longitude]);
+            } else {
+                  alert("Request failed.")
+            }
+         });
+         
       }
    </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c&libraries=places&callback=initMap">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c&libraries=geometry,places&callback=initMap">
 </script>
 </body>
 
