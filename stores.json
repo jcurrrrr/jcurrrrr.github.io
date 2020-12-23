@@ -4,7 +4,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "incarceration",
           "hours": "10am - 6pm",
           "description": "Modern twists on classic pastries. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Mayfair",
@@ -19,7 +19,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "incarceration",
           "hours": "10am - 6pm",
           "description": "Come and try our award-winning cakes and pastries. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Bristol",
@@ -34,7 +34,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "incarceration",
           "hours": "10am - 6pm",
           "description": "Whatever the occasion, whether it's a birthday or a wedding, Josie's Patisserie has the perfect treat for you. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Norwich",
@@ -49,7 +49,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "tenant",
           "hours": "10am - 6pm",
           "description": "A gourmet patisserie that will delight your senses. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Wimborne",
@@ -64,7 +64,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "tenant",
           "hours": "10am - 6pm",
           "description": "Spoil yourself or someone special with our classic pastries. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Liverpool",
@@ -79,7 +79,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "tenant",
           "hours": "10am - 6pm",
           "description": "Come and feast your eyes and tastebuds on our delicious pastries and cakes. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Tamworth",
@@ -94,7 +94,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "patisserie",
+          "category": "tenant",
           "hours": "10am - 6pm",
           "description": "Josie's Patisserie is family-owned, and our delectable pastries, cakes, and great coffee are renowed. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Patisserie Cardiff",
@@ -109,7 +109,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "cafe",
+          "category": "racial justice",
           "hours": "8am - 9:30pm",
           "description": "Oakham's favorite spot for fresh coffee and delicious cakes. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Oakham",
@@ -124,7 +124,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "cafe",
+          "category": "racial justice",
           "hours": "8am - 9:30pm",
           "description": "Enjoy freshly brewed coffe, and home baked cakes in our homely cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Blackburn",
@@ -139,7 +139,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "cafe",
+          "category": "racial justice",
           "hours": "8am - 9:30pm",
           "description": "A delicious array of pastries with many flavours, and fresh coffee in an snug cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Crawley",
@@ -154,7 +154,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "cafe",
+          "category": "union",
           "hours": "8am - 9:30pm",
           "description": "Grab a freshly brewed coffee, a decadent cake and relax in our idyllic cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Brighton",
@@ -169,7 +169,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "cafe",
+          "category": "union",
           "hours": "8am - 9:30pm",
           "description": "Come in and unwind at this idyllic cafe with fresh coffee and home made cakes. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Newtown",
@@ -184,7 +184,7 @@
       {
         "type": "Feature",
         "properties": {
-          "category": "cafe",
+          "category": "union",
           "hours": "8am - 9:30pm",
           "description": "Fresh coffee and delicious cakes in an snug cafe. We're part of a larger chain of patisseries and cafes.",
           "name": "Josie's Cafe Ipswich",
