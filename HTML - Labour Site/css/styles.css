@@ -7,7 +7,7 @@ body {
 
 h1 {
   color: #721906;
-  font-size: 50px;
+  font-size: 40px;
   margin: 15px 0 15px 0;
   display: inline-block;
   padding-top: 15px;
@@ -29,8 +29,25 @@ textarea{
 /***********CLASS SELECTORS ***********/
 
 .topbanner{
-  text-align: center;
   vertical-align: top;
+  text-align: center;
+}
+
+.descrtext{
+  width: 80%;
+  margin: auto;
+}
+
+.frontHeading{
+
+}
+
+.img1{
+  float: left;
+}
+
+.img2{
+  float: right;
 }
 
 
