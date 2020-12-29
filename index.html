@@ -40,13 +40,10 @@
          <input id = "zipsearch" class = "search" type = "text" name ="Full Name" placeholder="enter zip">
          <input id = "radsearch" class = "search" type = "text" name ="Full Name" placeholder="enter radius (mi)">
          
-         <h3>action</h3>
-         <input id = "union" type="checkbox"> union <br>
-         <input id = "incarceration" type="checkbox"> incarceration <br>
-         <input id = "tenant" type="checkbox"> tenant <br>
-         <input id = "racial justice" type="checkbox"> racial justice <br>
+         <h3 id = 'action'>action</h3>
+         <div id = 'checkholder'></div>
          
-         <button type = "submit">search</button>
+         <button type = "submit" id = 'searchbutton'>search</button>
       </form>
    </div>
    
@@ -55,16 +52,25 @@
    
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
    <script>
+      var catlist = ["union", "incarceration", "tenant", "racial justice", "test"]
       var infoWindow;
       var map;
       var bounds;
       var jsonURL = 'https://jcurrrrr.github.io/stores.json';
       var markers = [];
       var currcircle;
-      var currzip = '02111';
+      var loclatlng;
       var currrad = 50000;
-      // add catlist to make adding new catagories easier
-      var catlist = ["union", "incarceration", "tenant", "racial justice"]
+      var currzip;
+
+      // Dynamically build category selectors
+      $(document).ready(function(){
+         var i;
+         for (i = 0; i < catlist.length; i++) {
+            var $input = $("<input id ='"+ catlist[i] +"' type='checkbox'>" + catlist[i] + "<br>");
+            $('#checkholder').append($input);
+         }
+      });
 
       async function initMap() {
          // Create the map.
@@ -96,23 +102,30 @@
                   map: map
                });
                locmark.setIcon(icon);
-               addPoints('00000', currrad, new google.maps.LatLng(pos));
+               loclatlng = new google.maps.LatLng(pos);
+               addPoints('00000', currrad);
             }, () => {
+            
             });
          }
       }
       
-      function addPoints(zipcode, radius, latlng) {
+      function addPoints(zipcode, radius) {
          // Determine which catagories are selected
          var selectedcats = [];
+         $('#checkholder').children('input').each(function () {
+            if (this.checked) { 
+               selectedcats.push(this.id);
+            }
+         });
 
          var geocoder = new google.maps.Geocoder();
          var address = zipcode;
          geocoder.geocode({ 'address': 'zipcode ' + address, componentRestrictions: {country: "US" }}, function (results, status) {
             // Determines whethere to use zip code as center or user latlng
             var center;
-            if (latlng) {
-               center = latlng;
+            if (loclatlng) {
+               center = loclatlng;
             } else {
                if (status == google.maps.GeocoderStatus.OK) {
                   var ziploc = [];
@@ -143,6 +156,7 @@
             // Pulls JSON, adds each marker within radius.
             $.getJSON(jsonURL, function(json) {
                var i;
+               var found = false;
                
                for (i = 0; i < json.features.length; i++) {
                   var currEntry = json.features[i].properties;
@@ -152,29 +166,35 @@
 
                   if (dist < radius) {
                      var currcat = currEntry.category;
-                     var icon;
-                     var marker = null;
-                     
-                     // loop thru catagories, create marker if entry is one of the selected cats
-                     var count = catlist.length;
-                     var member = false;
-                     
 
-                     if (currcat == "union") {
-                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' } 
-                     } else if (currcat == "racial justice") {
-                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' } 
-                     } else if (currcat == "tenant") { 
-                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' } 
-                     } else {
-                        icon = { url : 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' } 
+                     if (selectedcats.indexOf(currcat) >= 0 || selectedcats.length == 0) {
+                        var icon;
+                        var marker = null;
+                        if (currcat == "union") {
+                           icon = { url : 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' } 
+                        } else if (currcat == "racial justice") {
+                           icon = { url : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' } 
+                        } else if (currcat == "tenant") { 
+                           icon = { url : 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' } 
+                        } else {
+                           icon = { url : 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' } 
+                        }
+
+                        var marker = new google.maps.Marker({
+                           position: latlng,
+                           map: map
+                        });
+
+                        marker.setIcon(icon)
+
+                        markers.push(marker);
+                        bindInfoWindow(marker, currEntry);
+                        found = true;
                      }
-
-                     marker.setIcon(icon)
-
-                     markers.push(marker);
-                     bindInfoWindow(marker, currEntry);
                   }
+               }
+               if (!found) {
+                  alert('No results found. Broaden search.')
                }
             });
          });
@@ -204,6 +224,7 @@
       $('#search').submit(function(e) {
          if (zipcode = $('#zipsearch').val()) {
             currzip = zipcode;
+            loclatlng = null;
          }
          if (radius = parseInt($('#radsearch').val())) {
             currrad = radius * 1609.34;
