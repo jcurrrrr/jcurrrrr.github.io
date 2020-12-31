@@ -114,17 +114,15 @@ h1{
 }
 
 .carousel-caption{
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .descrbox{
-  background-color: white;
   color: black;
-  position: relative;
-  top: 75px;
-  padding-bottom: 25px;
 }
+
 
 
 .contact-img{
@@ -158,4 +156,33 @@ h1{
 
 .form{
   margin-left: 50px;
+}
+
+.media-section-pink{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.media-section-yellow{
+  padding-top:20px;
+  padding-bottom: 20px;
+  font-size: 1.25px;
+  background-color: #f7ebcf;
+}
+
+.left-img{
+  width: 25%;
+  float: left;
+}
+
+.media-heading{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 3em;
+}
+
+.right-img{
+  width: 25%;
+  float: right;
 }
