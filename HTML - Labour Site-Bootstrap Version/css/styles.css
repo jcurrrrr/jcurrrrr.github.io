@@ -11,7 +11,7 @@ h2{
 }
 
 footer{
-  margin-top: 50px;
+  margin-top: 25px;
   padding-top: 25px;
   padding-bottom:25px;
 }
@@ -20,8 +20,8 @@ h1{
   font-size: 5rem;
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
-
 
 .img{
   display: inline-block;
@@ -29,7 +29,13 @@ h1{
   padding-top: 50px;
 }
 
-@media (max-width: 900px){
+.img-test{
+  display: inline-block;
+  width: 30%;
+  padding-top: 50px;
+}
+
+@media (max-width: 950px){
   h1{
     font-size: 3em;
   }
@@ -47,6 +53,7 @@ h1{
 .container-fluid{
   padding-left: 3%;
   padding-right: 3%;
+  margin-bottom: 25px;
 }
 
 .navbar-custom, footer{
@@ -93,20 +100,28 @@ h1{
 
 
 .carousel-item{
-  margin-top: 50px;
+  margin-top: 3%;
   padding-left: 15%;
   padding-right: 15%;
 }
+.carousel{
+  width: 85%;
+  margin: auto;
+}
 
+.carousel-caption{
+  position: absolute;
+  bottom: 0;
+}
 
 .descrbox{
   background-color: white;
   color: black;
   position: relative;
-  top: 60px;
-  padding-bottom:25px;
-  padding-top: 25px;
+  top: 75px;
+  padding-bottom: 25px;
 }
+
 
 .contact-img{
   display: inline-block;
@@ -139,8 +154,4 @@ h1{
 
 .form{
   margin-left: 50px;
-}
-
-.textarea{
-  width: 500px;
 }
