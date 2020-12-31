@@ -20,8 +20,9 @@ h1{
   font-size: 5rem;
   text-align: center;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
+
+
 
 .img{
   display: inline-block;
@@ -53,7 +54,10 @@ h1{
 .container-fluid{
   padding-left: 3%;
   padding-right: 3%;
-  margin-bottom: 25px;
+}
+
+.navbar{
+  margin-top: 25px;
 }
 
 .navbar-custom, footer{
@@ -136,7 +140,7 @@ h1{
 .contactHead{
   position: absolute;
   bottom: 25%;
-  left: 25%
+  left: 25%;
 }
 
 .contactInfo{
