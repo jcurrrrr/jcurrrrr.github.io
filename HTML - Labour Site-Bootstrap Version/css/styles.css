@@ -48,10 +48,6 @@ h1{
   padding-left: 3%;
   padding-right: 3%;
 }
-.dropdown-menu{
-  position:relative;
-  right: 50px;
-}
 
 .navbar-custom, footer{
   background-color: #dec79F;
