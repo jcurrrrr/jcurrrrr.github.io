@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav nav-fill w-100">
           <li class="nav-item nav-item-custom active">
-            <a class="nav-link navbar-text" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link navbar-text" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-item-custom">
             <a class="nav-link navbar-text" href="#">List of Actions</a>
@@ -50,12 +50,11 @@
               Media
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Data and Statistics</a>
+              <a class="dropdown-item" href="#">Learn About Unions!</a>
               <div class=dropdown-divider></div>
-              <a class="dropdown-item" href="#">Books</a>
-              <a class="dropdown-item" href="#">Podcasts</a>
-              <a class="dropdown-item" href="#">Movies</a>
-              <a class="dropdown-item" href="#">Websites</a>
+              <a class="dropdown-item" href="#">Facebook</a>
+              <a class="dropdown-item" href="#">Twitter</a>
+              <a class="dropdown-item" href="#">Instagram</a>
             </div>
           </li>
         </ul>
@@ -85,7 +84,9 @@
 
         <div class="col-lg-6 col-md-6 contactInfo">
           <h2>Contact Form</h2>
-          <div  id="contactForm">
+          <p>Please fill out the form and we will get back to you in 2-5 business days.</p>
+          <hr />
+          <div id="contactForm">
             <form class="form" action="mailto:tarangsaluja17@gmail.com" action="index.html" method="post" enctype="plain/text">
               <label> Your Name:</label>
               <input type="text" name="Full Name" placeholder="eg: Eugene Debs" /> <br /> <br />
@@ -100,9 +101,11 @@
               <label for="Union leader">Union member</label> <br />
               <input type="checkbox" id="labor organizer" name="labor organizer" />
               <label for="labor organizer">labor organizer</label> <br /> <br />
-              <textarea name="name" rows="10" columns="100" placeholder="Enter message here."></textarea>
-              <input type="submit" name="" />
-            </form>
+              <form action="/form/submit" method="post">
+                <textarea name="textarea" rows="5" cols="40">Write something here</textarea>
+                <br>
+                <input type="submit" name="submitInfo" value="Submit">
+              </form>
           </div>
 
         </div>
