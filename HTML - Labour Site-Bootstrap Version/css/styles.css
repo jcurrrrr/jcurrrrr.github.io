@@ -1,0 +1,98 @@
+body{
+  background-color: #F7DAD9;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  font-size: 3em;
+  color: #721906;
+}
+
+.mainHead{
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+.img{
+  display: inline-block;
+  width: 75%;
+  border-radius:20px;
+  position: relative;
+  top: 50px;
+}
+
+@media (max-width: 900px){
+  .mainHead{
+    font-size: 3em;
+  }
+
+  .img{
+    width: 30%;
+    border-radius:5px;
+  }
+}
+
+.container-fluid{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.dropdown-menu{
+  position:relative;
+  right: 50px;
+}
+
+.navbar-custom{
+  background-color: #dec79F;
+}
+
+.navbar-custom .navbar-text{
+  color: black;
+}
+
+.nav-item-custom:hover, .navbar-toggler{
+  background-color: #f7ebcf;
+}
+
+.mapMedia{
+  margin-top: 50px;
+}
+
+@media (max-width: 800px){
+  .t-feed{
+    display: none;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color:#dec79f;
+}
+
+.carousel h2{
+  margin-top: 50px;
+}
+
+.carousel-item{
+  margin-top: 50px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.carousel-item, .carousel-item img{
+    height: 60vh;
+}
+
+
+.descrbox{
+  background-color: white;
+  color: black;
+}
