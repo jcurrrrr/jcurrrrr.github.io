@@ -9,6 +9,12 @@ h2{
   color: #721906;
 }
 
+footer{
+  margin-top: 50px;
+  padding-top: 25px;
+  padding-bottom:25px;
+}
+
 .mainHead{
   font-size: 5rem;
   text-align: center;
@@ -97,4 +103,5 @@ h2{
   color: black;
   position: relative;
   top: 60px;
+  padding-bottom:25px;
 }
