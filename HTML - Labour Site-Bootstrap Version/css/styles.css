@@ -44,7 +44,7 @@ h2{
   right: 50px;
 }
 
-.navbar-custom{
+.navbar-custom, footer{
   background-color: #dec79F;
 }
 
@@ -95,4 +95,6 @@ h2{
 .descrbox{
   background-color: white;
   color: black;
+  position: relative;
+  top: 60px;
 }
