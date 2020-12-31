@@ -60,7 +60,7 @@
       var markers = [];
       var currcircle;
       var loclatlng;
-      var currrad = 50000;
+      var currrad = 40000;
       var currzip;
 
       // Dynamically build category selectors
@@ -167,7 +167,8 @@
                   if (dist < radius) {
                      var currcat = currEntry.category;
 
-                     if (selectedcats.indexOf(currcat) >= 0 || selectedcats.length == 0) {
+                     // This is shit-- maybe make a random color picker w/ key at chackboxes?
+                     if (selectedcats.includes(currcat) || selectedcats.length == 0) {
                         var icon;
                         var marker = null;
                         if (currcat == "union") {
