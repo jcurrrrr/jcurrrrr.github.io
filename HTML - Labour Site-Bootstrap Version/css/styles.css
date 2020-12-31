@@ -58,7 +58,11 @@ footer{
   color: black;
 }
 
-.nav-item-custom:hover, .navbar-toggler{
+.navbar-text:hover{
+  color: white;
+}
+
+.navbar-toggler{
   background-color: #f7ebcf;
 }
 
