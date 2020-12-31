@@ -1,6 +1,5 @@
 body{
   background-color: #F7DAD9;
-  text-align: center;
 }
 
 h2{
@@ -162,27 +161,40 @@ h1{
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 24px;
+  font-size: 1.25em;
 }
 
 .media-section-yellow{
   padding-top:20px;
   padding-bottom: 20px;
-  font-size: 1.25px;
+  font-size: 1.25em;
   background-color: #f7ebcf;
 }
 
-.left-img{
-  width: 25%;
-  float: left;
-}
+
 
 .media-heading{
   padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 3em;
+  font-size: 2em;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.media-subheading{
+  font-size: 1.5em;
+}
+
+.left-img{
+  display: inline-block;
+  height: 100%;
+  float: left;
 }
 
 .right-img{
-  width: 25%;
+  display: None;
+  height: 100px;
   float: right;
+}
+
+.media-item{
 }
