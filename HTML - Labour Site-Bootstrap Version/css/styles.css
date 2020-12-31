@@ -7,6 +7,7 @@ h2{
   text-align: center;
   font-size: 3em;
   color: #721906;
+  margin-bottom:50px;
 }
 
 footer{
@@ -15,7 +16,7 @@ footer{
   padding-bottom:25px;
 }
 
-.mainHead{
+h1{
   font-size: 5rem;
   text-align: center;
   padding-top: 50px;
@@ -25,19 +26,21 @@ footer{
 .img{
   display: inline-block;
   width: 75%;
-  border-radius:20px;
-  position: relative;
-  top: 50px;
+  padding-top: 50px;
 }
 
 @media (max-width: 900px){
-  .mainHead{
+  h1{
     font-size: 3em;
   }
 
   .img{
     width: 30%;
-    border-radius:5px;
+    border-radius: 5px;
+  }
+
+  .contact-img{
+    width: 30%;
   }
 }
 
@@ -87,18 +90,16 @@ footer{
   background-color:#dec79f;
 }
 
+
 .carousel h2{
   margin-top: 50px;
 }
+
 
 .carousel-item{
   margin-top: 50px;
   padding-left: 15%;
   padding-right: 15%;
-}
-
-.carousel-item, .carousel-item img{
-    height: 60vh;
 }
 
 
@@ -108,4 +109,38 @@ footer{
   position: relative;
   top: 60px;
   padding-bottom:25px;
+  padding-top: 25px;
+}
+
+.contact-img{
+  display: inline-block;
+  width: 75%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.contactTopBanner{
+  position: relative;
+}
+.contactHead{
+  position: absolute;
+  bottom: 25%;
+  left: 25%
+}
+
+.contactInfo{
+  text-align: left;
+  line-height: 1.5;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #dec79f;
+  padding-top: 50px;
+}
+
+.contactInfoBody{
+  margin-top: 5%;
+}
+
+#contactInfo{
+  margin-left: 50px;
 }
