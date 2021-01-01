@@ -2,7 +2,7 @@ var catlist = ["union", "incarceration", "tenant", "racial justice", "test"]
 var infoWindow;
 var map;
 var bounds;
-var jsonURL = 'https://jcurrrrr.github.io/stores.json';
+var jsonURL = 'https://jcurrrrr.github.io/res/stores.json';
 var markers = [];
 var currcircle;
 var loclatlng;
