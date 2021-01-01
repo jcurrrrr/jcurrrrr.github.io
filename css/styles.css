@@ -233,7 +233,7 @@ h1{
 
 #map {
   height: 100%;
-  width: 100%;
+  width: 80%;
   background-color: grey;
   float: right;
 }
