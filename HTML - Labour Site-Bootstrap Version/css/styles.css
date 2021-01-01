@@ -13,6 +13,7 @@ footer{
   margin-top: 25px;
   padding-top: 25px;
   padding-bottom:25px;
+  text-align: center;
 }
 
 h1{
@@ -51,8 +52,6 @@ h1{
 }
 
 .container-fluid{
-  padding-left: 3%;
-  padding-right: 3%;
 }
 
 .navbar{
@@ -151,6 +150,8 @@ h1{
 
 .contactInfoBody{
   margin-top: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .form{
@@ -162,6 +163,7 @@ h1{
   padding-bottom: 20px;
   font-size: 24px;
   font-size: 1.25em;
+  position: relative;
 }
 
 .media-section-yellow{
@@ -169,6 +171,7 @@ h1{
   padding-bottom: 20px;
   font-size: 1.25em;
   background-color: #f7ebcf;
+  position: relative;
 }
 
 
@@ -196,5 +199,29 @@ h1{
   float: right;
 }
 
+.media-img{
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px){
+  .media-img{
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px){
+  .media-img{
+    width:20%;
+  }
+}
+
+@media (max-width: 600px){
+  .media-img{
+    width:15%;
+  }
+}
+
 .media-item{
+  text-align: center;
 }
