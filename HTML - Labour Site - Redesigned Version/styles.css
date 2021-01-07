@@ -1,3 +1,83 @@
-#login-button {
-    margin-right: 50px;
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap%27');
+
+@media (max-width: 990px){
+
+  #login-button{
+    position: absolute;
+    right: 500px;
+  }
+
+
+}
+
+.top-banner{
+  height: 80vh;
+  width: 100vw;
+
+}
+
+.top-banner-text{
+  padding-top: 15vh;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.top-banner-text h1{
+  font-size: 4rem;
+  padding-bottom: 1.5vh;
+  font-weight: bold;
+}
+
+.top-banner-text h2{
+  font-size: 2.5rem;
+}
+
+
+.mapSearch{
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 5vh;
+  height: auto;
+  background-color: #666666;
+  border-radius: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 10px;
+  padding-inline-start: 15px;
+}
+
+li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+li:hover{
+  background-color: #e65c00;
+  border-radius: 5px;
+}
+
+.mapInfoForm{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10%;
+}
+
+.row{
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+.col-lg-6{
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
 }

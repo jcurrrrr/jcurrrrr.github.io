@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
   <title>Act Map</title>
 </head>
@@ -19,25 +21,22 @@
   <div class="navigation">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Act Map</a>
-      <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" id="login-button" type="submit">Login</button>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>fff
       </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item active mx-4">
             <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-4">
             <a class="nav-link" href="#">List of Actions</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-4">
             <a class="nav-link" href="#">Donate</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item mx-4 dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Media
             </a>
@@ -47,23 +46,51 @@
               <a class="dropdown-item" href="#">Facebook</a>
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-4">
             <a class="nav-link disabled" href="#">Contact Us</a>
           </li>
         </ul>
-        
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
         </form>
       </div>
     </nav>
   </div>
 
-  <div class="top-banner">
+  <div class="top-banner container-fluid">
 
-    <h1></h1>
 
-    <h2></h2>
+
+    <div class="top-banner-text">
+      <h1>Act Map</h1>
+
+      <h2>Find and Participate in Actions Near You</h2>
+    </div>
+
 
     <div class="mapSearch">
+      <ul class="selectTags">
+        <li>View All</li>
+        <li>Strikes</li>
+        <li>Encampments</li>
+        <li>Supplies Needed</li>
+        <li>Funds Needed</li>
+      </ul>
+
+      <form class="mapInfoForm" action="" method="post" enctype="plain/text">
+        <div class="row">
+
+          <div class="col-lg-6" "col-md-6">
+            <input class = "zip-enter" type="text" name="zip" placeholder="Enter ZIP:" size = 65% />
+          </div>
+
+          <div class="col-lg-6" "col-md-6">
+            <input type="text" name="mi-radius" placeholder="Enter radius (mi):" size = 65% />
+          </div>
+        </div>
+        <input class="search-btn" type="submit" name="submitInfo" value="Submit">
+      </form>
+
 
     </div>
 
