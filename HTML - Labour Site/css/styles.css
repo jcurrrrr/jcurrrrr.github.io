@@ -1,0 +1,75 @@
+/************* TAG SELECTORS **********/
+
+
+body {
+  background-color: #F7DAD9;
+}
+
+h1 {
+  color: #721906;
+  font-size: 40px;
+  margin: 15px 0 15px 0;
+  display: inline-block;
+  padding-top: 15px;
+}
+
+hr {
+  background-color: white;
+  border-style: dotted;
+  border-width: 0;
+  height: 3px;
+  width: 95%;
+}
+
+textarea{
+  width: 90%;
+}
+
+
+/***********CLASS SELECTORS ***********/
+
+.topbanner{
+  vertical-align: top;
+  text-align: center;
+}
+
+.descrtext{
+  width: 80%;
+  margin: auto;
+}
+
+.frontHeading{
+
+}
+
+.img1{
+  float: left;
+}
+
+.img2{
+  float: right;
+}
+
+
+.subHead{
+  font-size: 20px;
+  display: inline-block;
+}
+.headText{
+  font-family: Arial;
+  font-size: 15px;
+}
+
+.contactForm{
+  border: solid;
+  margin-left:500px;
+  padding-left:20px;
+  width: 30%;
+}
+
+/********ID Sectlors ********/
+
+#directContact{
+  font-size:15px;
+  font-family: Courier;
+}
