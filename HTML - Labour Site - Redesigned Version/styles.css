@@ -7,20 +7,43 @@
     position: absolute;
     right: 500px;
   }
-
-
 }
 
 .top-banner{
-  height: 80vh;
-  width: 100vw;
+  position: relative;
+}
 
+.top-banner-carousel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.top-banner-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-image: url("https://cdn.discordapp.com/attachments/788973974447980566/796863662798405652/image0.jpg");
+  opacity: 0.2;
+}
+
+.c-img{
+  opacity: 0.2;
 }
 
 .top-banner-text{
   padding-top: 15vh;
   text-align: center;
   font-family: 'Oswald', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .top-banner-text h1{
@@ -33,11 +56,18 @@
   font-size: 2.5rem;
 }
 
+.navigation{
+  position: relative;
+}
+
+
 @media (max-width: 767px){
   .entr{
     padding-bottom: 20px;
   }
 }
+
+
 
 .mapSearch{
   margin-left: 10vw;
@@ -47,6 +77,8 @@
   background-color: #666666;
   border-radius: 15px;
   font-family: 'Oswald', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .sel{
@@ -75,7 +107,6 @@
   padding-bottom: 5px;
 
 }
-
 
 .search-btn:hover{
   color: white;
