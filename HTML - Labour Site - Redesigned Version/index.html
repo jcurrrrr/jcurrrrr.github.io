@@ -69,26 +69,41 @@
 
 
     <div class="mapSearch">
-      <ul class="selectTags">
-        <li>View All</li>
-        <li>Strikes</li>
-        <li>Encampments</li>
-        <li>Supplies Needed</li>
-        <li>Funds Needed</li>
-      </ul>
+
+      <div class = "row select-bar">
+        <div class = "sel col-lg-2 col-md-3 col-sm-4">
+          <p>View All</p>
+        </div>
+        <div class = "sel col-lg-2 col-md-3 col-sm-4">
+          <p>Strikes</p>
+        </div>
+        <div class = "sel col-lg-2 col-md-3 col-sm-4">
+          <p>Encampments</p>
+        </div>
+        <div class = "sel col-lg-2 col-md-3 col-sm-4">
+          <p>Supplies Needed</p>
+        </div>
+        <div class = "sel col-lg-2 col-md-3 col-sm-4">
+          <p>Funds Needed</p>
+        </div>
+      </div>
+
 
       <form class="mapInfoForm" action="" method="post" enctype="plain/text">
         <div class="row">
 
-          <div class="col-lg-6" "col-md-6">
-            <input class = "zip-enter" type="text" name="zip" placeholder="Enter ZIP:" size = "65vw" />
+          <div class="entr col-lg-5 col-md-5">
+            <input class="form-control" type="text" name="zip" placeholder="Enter ZIP:" />
           </div>
 
-          <div class="col-lg-6" "col-md-6">
-            <input type="text" name="mi-radius" placeholder="Enter radius (mi):" size = "65vw" />
+          <div class="entr col-lg-5 col-md-5">
+            <input  class = "form-control" type="text" name="mi-radius" placeholder="Enter radius (mi):" />
+          </div>
+
+          <div class="entr col-lg-2 col-md-2">
+            <input class="search-btn form-control" type="submit" name="submitInfo" value="Submit">
           </div>
         </div>
-        <input class="search-btn" type="submit" name="submitInfo" value="Submit">
       </form>
 
 
