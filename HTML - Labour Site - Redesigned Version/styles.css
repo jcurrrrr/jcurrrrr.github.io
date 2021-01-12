@@ -11,6 +11,7 @@
 
 .top-banner{
   position: relative;
+  height: 80vh;
 }
 
 .top-banner-carousel{
@@ -19,23 +20,11 @@
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
-}
-
-.top-banner-img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-  background-image: url("https://cdn.discordapp.com/attachments/788973974447980566/796863662798405652/image0.jpg");
-  opacity: 0.2;
 }
 
 .c-img{
   opacity: 0.2;
+  height: 80vh;
 }
 
 .top-banner-text{
@@ -47,13 +36,13 @@
 }
 
 .top-banner-text h1{
-  font-size: 4rem;
+  font-size: 8.5vh;
   padding-bottom: 1.5vh;
   font-weight: bold;
 }
 
 .top-banner-text h2{
-  font-size: 2.5rem;
+  font-size: 5.5vh;
 }
 
 .navigation{
@@ -65,9 +54,16 @@
   .entr{
     padding-bottom: 20px;
   }
+  .top-banner-text{
+    padding-top: 5vh;
+  }
+  .top-banner{
+    height: 110vh;
+  }
+  .c-img{
+    height: 110vh;
+  }
 }
-
-
 
 .mapSearch{
   margin-left: 10vw;
@@ -75,7 +71,7 @@
   margin-top: 5vh;
   height: auto;
   background-color: #666666;
-  border-radius: 15px;
+  border-radius: 2vh;
   font-family: 'Oswald', sans-serif;
   position: relative;
   z-index: 1;
