@@ -59,13 +59,6 @@
 
   <div class="top-banner container-fluid">
 
-
-    <div class="top-banner-text">
-      <h1>Act Map</h1>
-
-      <h2>Find and Participate in Actions Near You</h2>
-    </div>
-
     <div class="top-banner-carousel container-fluid">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -81,6 +74,14 @@
         </div>
       </div>
     </div>
+
+
+    <div class="top-banner-text">
+      <h1>Act Map</h1>
+
+      <h2>Find and Participate in Actions Near You</h2>
+    </div>
+
 
     <div class="mapSearch">
 
@@ -124,6 +125,8 @@
 
   </div>
 
+  <hr />
+
   <div class="body">
     <div class="supported-bar">
 
@@ -148,17 +151,16 @@
             <form id = "search">
                <input id = "zipsearch" class = "search" type = "text" name ="Full Name" placeholder="enter zip">
                <input id = "radsearch" class = "search" type = "text" name ="Full Name" placeholder="enter radius (mi)">
-               
+
                <h3 id = 'action'>action</h3>
                <div id = 'checkholder'></div>
-               
+
                <button type = "submit" id = 'searchbutton'>search</button>
             </form>
          </div>
-         
+
          <div id="map"></div>
-      
-        <hr />
+
   </div>
 
   <footer>
