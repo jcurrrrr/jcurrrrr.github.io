@@ -114,11 +114,12 @@
 }
 
 #mapCont {
-  height: 80vh;
+  height: 75vh;
   width: 100vw;
-  top: 100vh;
   position: absolute;
   visibility: hidden;
+  background-color: red;
+  z-index: 100;
 }
 
 #map {

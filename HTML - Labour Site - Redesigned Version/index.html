@@ -100,7 +100,7 @@
           </div>
 
           <div class="entr col-lg-2 col-md-2">
-            <input class="search-btn form-control" type="submit" name="submitInfo" value="Submit">
+            <input class="search-btn form-control" type="button" name="submitInfo" onclick="subSearch()" value="Submit">
           </div>
         </div>
       </form>
@@ -152,7 +152,7 @@
                <h3 id = 'action'>action</h3>
                <div id = 'checkholder'></div>
 
-               <button type = "submit" id = 'searchbutton' onclick="openMap()">search</button>
+               <button type = "submit" id = 'searchbutton'>search</button>
             </form>
          </div>
 
@@ -166,7 +166,7 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c&libraries=geometry,places&callback=initMap"></script>

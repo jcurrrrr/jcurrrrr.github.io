@@ -9,9 +9,6 @@ var loclatlng;
 var currrad = 40000;
 var currzip;
 
-function openMap() {
-   $("#mapCont").css("visibility", "visible");
-}
 
 // Dynamically build category selectors
 $(document).ready(function(){
@@ -172,7 +169,13 @@ function bindInfoWindow(marker, jsonEntry) {
 }
 
 
-$('#search').submit(function(e) {
+function subSearch() {
+   var mapCont = document.getElementById("mapCont");
+   mapCont.style.visibility = 'visible';
+   var navHeight = document.getElementsByClassName("navigation")[0].offsetHeight;
+   console.log(navHeight);
+   mapCont.style.top =( navHeight.toString() + 'px');
+   
    if (zipcode = $('#zipsearch').val()) {
       currzip = zipcode;
       loclatlng = null;
@@ -191,4 +194,4 @@ $('#search').submit(function(e) {
    }
    addPoints(currzip, currrad);
    return false;
-});
+};
