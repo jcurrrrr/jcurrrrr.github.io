@@ -14,22 +14,11 @@
   height: fit-content;
   margin-bottom: 10px;
   overflow: hidden;
+  background-image: url("8888s-Strike.png");
 
 }
 
-.top-banner-carousel{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-}
 
-.c-img{
-  opacity: 0.2;
-  height: 80vh;
-}
 
 .top-banner-text{
   padding-top: 15vh;
