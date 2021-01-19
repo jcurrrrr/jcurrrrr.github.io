@@ -145,7 +145,6 @@
 }
 
 #mapCont {
-  height: 80vh;
   height: 75vh;
   width: 100vw;
   top: 100vh;
@@ -162,6 +161,7 @@
   background-color: grey;
   float: right;
 }
+
 .body{
   padding-left: 3%;
   padding-right: 3%;
