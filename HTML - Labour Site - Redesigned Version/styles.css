@@ -11,11 +11,12 @@
 
 .top-banner{
   position: relative;
-  height: fit-content;
+  height: 75vh;
   margin-bottom: 10px;
   overflow: hidden;
   background-image: url("8888s-Strike.png");
-
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -29,13 +30,13 @@
 }
 
 .top-banner-text h1{
-  font-size: 5.5vw;
+  font-size: 8vw;
   padding-bottom: 1.5vw;
   font-weight: bold;
 }
 
 .top-banner-text h2{
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 .navigation{
@@ -66,26 +67,56 @@
   position: relative;
   z-index: 1;
   margin-bottom: 16vh;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 990px){
   .mapSearch{
     margin-bottom: 9vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    font-size: 0.8rem;
   }
+
+  .form-control{
+    font-size: 0.8rem;
+  }
+
 }
 
 @media (max-width: 576px){
   .mapSearch{
     margin-bottom: 3vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    font-size: 0.7rem;
   }
+  .form-control{
+    font-size: 0.7rem;
+  }
+
+
+}
+
+@media (max-width: 300px){
+  .mapSearch{
+    margin-bottom: 2vh;
+    font-size: 0.5rem;
+  }
+
+  .form-control{
+    font-size: 0.5rem;
+  }
+
+
 }
 
 
 .sel{
-  height: 30px;
+  height: 20px;
   color: white;
-  padding-left: 10px;
-  padding-right:10px;
+  padding-left: 3%;
+  padding-right:3%;
 }
 
 .sel:hover{
