@@ -11,7 +11,10 @@
 
 .top-banner{
   position: relative;
-  height: 80vh;
+  height: fit-content;
+  margin-bottom: 10px;
+  overflow: hidden;
+
 }
 
 .top-banner-carousel{
@@ -20,6 +23,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  height: 100%;
 }
 
 .c-img{
@@ -36,13 +40,13 @@
 }
 
 .top-banner-text h1{
-  font-size: 8.5vh;
-  padding-bottom: 1.5vh;
+  font-size: 5.5vw;
+  padding-bottom: 1.5vw;
   font-weight: bold;
 }
 
 .top-banner-text h2{
-  font-size: 5.5vh;
+  font-size: 3vw;
 }
 
 .navigation{
@@ -57,11 +61,9 @@
   .top-banner-text{
     padding-top: 5vh;
   }
-  .top-banner{
-    height: 110vh;
-  }
-  .c-img{
-    height: 110vh;
+
+  .mapSearch{
+    margin-bottom: 10vh;
   }
 }
 
@@ -69,13 +71,26 @@
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 5vh;
-  height: auto;
   background-color: #666666;
   border-radius: 2vh;
   font-family: 'Oswald', sans-serif;
   position: relative;
   z-index: 1;
+  margin-bottom: 16vh;
 }
+
+@media (max-width: 990px){
+  .mapSearch{
+    margin-bottom: 9vh;
+  }
+}
+
+@media (max-width: 576px){
+  .mapSearch{
+    margin-bottom: 3vh;
+  }
+}
+
 
 .sel{
   height: 30px;
@@ -122,4 +137,8 @@
   width: 80%;
   background-color: grey;
   float: right;
+}
+.body{
+  padding-left: 3%;
+  padding-right: 3%;
 }
