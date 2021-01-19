@@ -108,3 +108,18 @@
   color: white;
   background-color: #e65c00;
 }
+
+#mapCont {
+  height: 80vh;
+  width: 100vw;
+  top: 100vh;
+  position: absolute;
+  visibility: hidden;
+}
+
+#map {
+  height: 100%;
+  width: 80%;
+  background-color: grey;
+  float: right;
+}
