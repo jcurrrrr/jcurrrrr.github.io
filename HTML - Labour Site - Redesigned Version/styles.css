@@ -12,11 +12,21 @@
 .top-banner{
   position: relative;
   height: 75vh;
+  min-height: 500px;
   margin-bottom: 10px;
-  overflow: hidden;
   background-image: url("8888s-Strike.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section-cover {
+    background: rgb(255 252 170 / 35%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
 }
 
 
@@ -136,7 +146,6 @@
   padding-right: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
-
 }
 
 .search-btn:hover{
@@ -152,6 +161,7 @@
   visibility: hidden;
   background-color: red;
   z-index: 100;
+  min-height: 500px;
 }
 
 
