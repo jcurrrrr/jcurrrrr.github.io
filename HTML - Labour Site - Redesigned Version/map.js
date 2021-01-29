@@ -177,11 +177,9 @@ function bindInfoWindow(marker, jsonEntry) {
 
 
 function subSearch() {
-   var mapCont = document.getElementById("mapCont");
-   mapCont.style.visibility = 'visible';
-   var navHeight = document.getElementsByClassName("navigation")[0].offsetHeight;
-   console.log(navHeight);
-   mapCont.style.top =( navHeight.toString() + 'px');
+   var mapCont = $('#mapCont');
+   $('#tb').prepend(mapCont);
+   //mapCont.style.top =(navHeight.toString() + 'px');
    
    if ((zipcode = $('#zipsearch').val()) || (zipcode = $('#zipsearchmain').val())) {
       currzip = zipcode;
