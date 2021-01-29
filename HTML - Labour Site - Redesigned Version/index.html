@@ -95,11 +95,11 @@
         <div class="row">
 
           <div class="entr col-lg-5 col-md-5">
-            <input class="form-control" type="text" name="zip" placeholder="Enter ZIP:" />
+            <input class="form-control" type="text" name="zip" id = "zipseachmain" placeholder="Enter ZIP:" />
           </div>
 
           <div class="entr col-lg-5 col-md-5">
-            <input class="form-control" type="text" name="mi-radius" placeholder="Enter radius (mi):" />
+            <input class="form-control" type="text" name="mi-radius" id = "radsearchmain" placeholder="Enter radius (mi):" />
           </div>
 
           <div class="entr col-lg-2 col-md-2">
@@ -153,7 +153,7 @@
           <h3 id = 'action'>action</h3>
           <div id = 'checkholder'></div>
 
-          <button type = "button" id = 'searchbutton'>search</button>
+          <button type = "button" id = 'searchbutton' onclick="subSearch()">search</button>
       </form>
     </div>
 

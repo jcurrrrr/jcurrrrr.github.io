@@ -31,6 +31,7 @@ async function initMap() {
    infoWindow = new google.maps.InfoWindow();
 
    // Try geolocation. If successful, use users location as center of search
+   /*
    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
          pos = {
@@ -55,6 +56,7 @@ async function initMap() {
       
       });
    }
+   */
 }
 
 function addPoints(zipcode, radius) {
@@ -176,11 +178,11 @@ function subSearch() {
    console.log(navHeight);
    mapCont.style.top =( navHeight.toString() + 'px');
    
-   if (zipcode = $('#zipsearch').val()) {
+   if ((zipcode = $('#zipsearch').val()) || (zipcode = $('#zipsearchmain').val())) {
       currzip = zipcode;
       loclatlng = null;
    }
-   if (radius = parseInt($('#radsearch').val())) {
+   if ((radius = parseInt(zipcode = $('#zipsearchmain').val())) || (radius = parseInt($('#radsearch').val()))) {
       currrad = radius * 1609.34;
    }
 
