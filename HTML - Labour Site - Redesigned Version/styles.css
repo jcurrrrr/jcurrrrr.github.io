@@ -169,12 +169,24 @@
   min-height: 500px;
 }
 
-
 #map {
   height: 100%;
-  width: 80%;
+  width: 100%;
   background-color: grey;
   float: right;
+  z-index: 1;
+}
+
+#mapSearchBox{
+  float: left; 
+  margin-top: 10vh; 
+  color: white;
+  width: auto;
+  position: absolute;
+  z-index: 2;
+  background-color: gray;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .body{
@@ -182,7 +194,20 @@
   padding-right: 3%;
 }
 
+.search {
+  display: block;
+}
+
 .supported-bar{
   height: 25vh;
   background-color: yellow;
+}
+
+input {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }

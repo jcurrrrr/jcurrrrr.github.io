@@ -14,7 +14,8 @@ var currzip;
 $(document).ready(function(){
    var i;
    for (i = 0; i < catlist.length; i++) {
-      var $input = $("<input id ='"+ catlist[i] +"' type='checkbox'>" + catlist[i] + "<br>");
+      var $input = $("<input id ='"+ catlist[i] +"' type='checkbox'>" 
+      + "  " + catlist[i] + "<br>");
       $('#checkholder').append($input);
    }
 });
@@ -24,6 +25,10 @@ async function initMap() {
    map = new google.maps.Map(document.getElementById('map'), {
       zoom: 8,
       center: {lat: 42.360, lng: -71.0589},
+      mapTypeControl: false,
+      mapTypeControlOptions: {
+         mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID]
+       },
    });
 
    const apiKey = 'AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c';
