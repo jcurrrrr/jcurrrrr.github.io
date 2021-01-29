@@ -35,13 +35,6 @@
     z-index: 1;
 }
 
-<<<<<<< Updated upstream
-
-
-
-
-=======
->>>>>>> Stashed changes
 .top-banner-text{
   padding-top: 15vh;
   text-align: center;
@@ -183,12 +176,8 @@
 }
 
 #mapSearchBox{
-<<<<<<< Updated upstream
   float: left;
   margin-top: 10vh;
-=======
-  float: left; 
->>>>>>> Stashed changes
   color: white;
   width: auto;
   position: absolute;
