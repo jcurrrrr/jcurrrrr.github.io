@@ -21,9 +21,11 @@
   <div class="navigation">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Act Map</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>fff
-      </button>
+      <div id = "toggler-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -50,15 +52,19 @@
             <a class="nav-link disabled" href="#">Contact Us</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-        </form>
       </div>
+      <div id = "login-btn">
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn submit-btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+
+      </div>
+
     </nav>
   </div>
 
   <div class="top-banner container-fluid">
-    <div class = "section-cover">
+    <div class="section-cover">
 
     </div>
 
@@ -95,11 +101,11 @@
         <div class="row">
 
           <div class="entr col-lg-5 col-md-5">
-            <input class="form-control" type="text" name="zip" id = "zipseachmain" placeholder="Enter ZIP:" />
+            <input class="form-control" type="text" name="zip" id="zipseachmain" placeholder="Enter ZIP:" />
           </div>
 
           <div class="entr col-lg-5 col-md-5">
-            <input class="form-control" type="text" name="mi-radius" id = "radsearchmain" placeholder="Enter radius (mi):" />
+            <input class="form-control" type="text" name="mi-radius" id="radsearchmain" placeholder="Enter radius (mi):" />
           </div>
 
           <div class="entr col-lg-2 col-md-2">
@@ -118,11 +124,11 @@
   <div class="body">
     <div class="supported-bar">
       Working with and supported by:
-      <div class = "row">
-        <div class = "col-6">
+      <div class="row">
+        <div class="col-6">
           ICONS HERE
         </div>
-        <div class = "col-6">
+        <div class="col-6">
           <center>
             CLICK BELOW BUTTON HERE
           </center>
@@ -144,16 +150,16 @@
     </div>
   </div>
 
-  <div id = "mapCont">
+  <div id="mapCont">
     <div style="float: left; padding-top: 40vh; width: 20%;">
-      <form id = "search">
-          <input id = "zipsearch" class = "search" type = "text" name ="Full Name" placeholder="enter zip">
-          <input id = "radsearch" class = "search" type = "text" name ="Full Name" placeholder="enter radius (mi)">
+      <form id="search">
+        <input id="zipsearch" class="search" type="text" name="Full Name" placeholder="enter zip">
+        <input id="radsearch" class="search" type="text" name="Full Name" placeholder="enter radius (mi)">
 
-          <h3 id = 'action'>action</h3>
-          <div id = 'checkholder'></div>
+        <h3 id='action'>action</h3>
+        <div id='checkholder'></div>
 
-          <button type = "button" id = 'searchbutton' onclick="subSearch()">search</button>
+        <button type="button" id='searchbutton' onclick="subSearch()">search</button>
       </form>
     </div>
 

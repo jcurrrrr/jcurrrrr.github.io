@@ -9,6 +9,11 @@
   }
 }
 
+.nav-link{
+  text-align: right;
+}
+
+
 .top-banner{
   position: relative;
   height: 75vh;
