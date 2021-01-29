@@ -14,6 +14,7 @@
 }
 
 
+
 .top-banner{
   position: relative;
   height: 75vh;
@@ -33,6 +34,8 @@
     right: 0;
     z-index: 1;
 }
+
+
 
 
 
@@ -178,8 +181,8 @@
 }
 
 #mapSearchBox{
-  float: left; 
-  margin-top: 10vh; 
+  float: left;
+  margin-top: 10vh;
   color: white;
   width: auto;
   position: absolute;
