@@ -21,12 +21,11 @@
   <div class="navigation">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Act Map</a>
-      <div id = "toggler-nav">
+      <div id="toggler">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active mx-4">
@@ -53,18 +52,14 @@
           </li>
         </ul>
       </div>
-      <div id = "login-btn">
-        <form class="form-inline my-2 my-lg-0">
-          <button class="btn submit-btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-        </form>
-
-      </div>
-
     </nav>
   </div>
 
-  <div id = "tb" class="top-banner container-fluid">
+
+
+  <div id="tb" class="top-banner container-fluid">
     <div class="section-cover">
+
 
     </div>
 
@@ -150,16 +145,16 @@
     </div>
   </div>
 
-  <div id = "mapCont">
-    <div id = "mapSearchBox">
-      <form id = "search">
-          <input id = "zipsearch" class = "form-control" type = "text" name ="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
-          <input id = "radsearch" class = "form-control" type = "text" name ="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
+  <div id="mapCont">
+    <div id="mapSearchBox">
+      <form id="search">
+        <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
+        <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
 
-          <h4 id = 'action'>Action</h4>
-          <div id = 'checkholder'></div>
+        <h4 id='action'>Action</h4>
+        <div id='checkholder'></div>
 
-          <button class = "search-btn form-control" type = "button" style="margin-top: 10px;" id = 'searchbutton' onclick="subSearch()">search</button>
+        <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
       </form>
     </div>
 
@@ -177,7 +172,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC9qoUkWr5lhVeqb8agYWE7Gx5zxTT66c&libraries=geometry,places&callback=initMap"></script>
   <script src="map.js"></script>
-  <script src = "index.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
