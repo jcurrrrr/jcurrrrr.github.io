@@ -44,8 +44,29 @@ body {
 }
 
 .navbar-custom .navbar-toggler{
-  background-color: #e65c00;
+  background-color: white;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.navbar-custom .nav-item .dropdown-menu{
+  background-color: #666666;
+  border-color: white;
+  border-width: 5px;
+}
+
+.navbar-custom .nav-item .dropdown-item{
+  background-color: #666666;
   color: white;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.navbar-custom .nav-item .dropdown-item:hover{
+  background-color: #e65c00;
+  border-radius: 10px;
 }
 
 
@@ -132,6 +153,16 @@ body {
     font-size: 0.8rem;
   }
 
+  .navbar-custom .navbar-nav .nav-link,
+  .navbar-custom .navbar-toggler,
+  .navbar-custom .nav-item .dropdown-item {
+    font-size: 0.8rem;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 0.9rem;
+  }
+
 }
 
 @media (max-width: 576px){
@@ -143,6 +174,16 @@ body {
   }
   .form-control{
     font-size: 0.7rem;
+  }
+
+  .navbar-custom .navbar-nav .nav-link,
+  .navbar-custom .navbar-toggler,
+  .navbar-custom .nav-item .dropdown-item {
+    font-size: 0.7rem;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 0.8rem;
   }
 
 
@@ -157,6 +198,19 @@ body {
   .form-control{
     font-size: 0.5rem;
   }
+
+
+  .navbar-custom .navbar-nav .nav-link,
+  .navbar-custom .navbar-toggler,
+  .navbar-custom .nav-item .dropdown-item {
+    font-size: 0.5rem;
+  }
+
+  .navbar-custom .navbar-brand{
+    font-size: 0.7rem;
+  }
+
+
 
 
 }
