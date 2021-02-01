@@ -44,8 +44,29 @@ body {
 }
 
 .navbar-custom .navbar-toggler{
-  background-color: #e65c00;
+  background-color: white;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.navbar-custom .nav-item .dropdown-menu{
+  background-color: #666666;
+  border-color: white;
+  border-width: 5px;
+}
+
+.navbar-custom .nav-item .dropdown-item{
+  background-color: #666666;
   color: white;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.navbar-custom .nav-item .dropdown-item:hover{
+  background-color: #e65c00;
+  border-radius: 10px;
 }
 
 
