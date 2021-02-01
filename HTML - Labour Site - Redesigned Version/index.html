@@ -17,148 +17,149 @@
 </head>
 
 <body>
+  <div id = "wrap">
+    <div class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Act Map</a>
+        <div id="toggler">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active mx-4">
+              <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">List of Actions</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Donate</a>
+            </li>
+            <li class="nav-item mx-4 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Media
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Twitter</a>
+                <a class="dropdown-item" href="#">Instagram</a>
+                <a class="dropdown-item" href="#">Facebook</a>
+              </div>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link disabled" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-  <div class="navigation">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Act Map</a>
-      <div id="toggler">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
+
+    <div id="tb" class="top-banner container-fluid">
+      <div class="section-cover">
+
+
       </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active mx-4">
-            <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item mx-4">
-            <a class="nav-link" href="#">List of Actions</a>
-          </li>
-          <li class="nav-item mx-4">
-            <a class="nav-link" href="#">Donate</a>
-          </li>
-          <li class="nav-item mx-4 dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Media
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Twitter</a>
-              <a class="dropdown-item" href="#">Instagram</a>
-              <a class="dropdown-item" href="#">Facebook</a>
+
+
+      <div class="top-banner-text">
+        <h1>Act Map</h1>
+
+        <h2>Find and Participate in Actions Near You</h2>
+      </div>
+
+
+      <div class="mapSearch">
+
+        <div class="row select-bar">
+          <div class="sel col-lg-2 col-md-4 col-sm-6">
+            <p>View All</p>
+          </div>
+          <div class="sel col-lg-2 col-md-4 col-sm-6">
+            <p>Strikes</p>
+          </div>
+          <div class="sel col-lg-2 col-md-4 col-sm-6">
+            <p>Encampments</p>
+          </div>
+          <div class="sel col-lg-2 col-md-4 col-sm-6">
+            <p>Supplies Needed</p>
+          </div>
+          <div class="sel col-lg-2 col-md-4 col-sm-6">
+            <p>Funds Needed</p>
+          </div>
+        </div>
+
+
+        <form class="mapInfoForm" action="" method="post" enctype="plain/text">
+          <div class="row">
+
+            <div class="entr col-lg-5 col-md-5">
+              <input class="form-control" type="text" name="zip" id="zipseachmain" placeholder="Enter ZIP:" />
             </div>
-          </li>
-          <li class="nav-item mx-4">
-            <a class="nav-link disabled" href="#">Contact Us</a>
-          </li>
-        </ul>
+
+            <div class="entr col-lg-5 col-md-5">
+              <input class="form-control" type="text" name="mi-radius" id="radsearchmain" placeholder="Enter radius (mi):" />
+            </div>
+
+            <div class="entr col-lg-2 col-md-2">
+              <input class="search-btn form-control" type="button" name="submitInfo" onclick="subSearch()" value="Submit">
+            </div>
+          </div>
+        </form>
+
       </div>
-    </nav>
-  </div>
-
-
-
-  <div id="tb" class="top-banner container-fluid">
-    <div class="section-cover">
-
 
     </div>
 
-
-    <div class="top-banner-text">
-      <h1>Act Map</h1>
-
-      <h2>Find and Participate in Actions Near You</h2>
-    </div>
+    <hr />
 
 
-    <div class="mapSearch">
-
-      <div class="row select-bar">
-        <div class="sel col-lg-2 col-md-4 col-sm-6">
-          <p>View All</p>
-        </div>
-        <div class="sel col-lg-2 col-md-4 col-sm-6">
-          <p>Strikes</p>
-        </div>
-        <div class="sel col-lg-2 col-md-4 col-sm-6">
-          <p>Encampments</p>
-        </div>
-        <div class="sel col-lg-2 col-md-4 col-sm-6">
-          <p>Supplies Needed</p>
-        </div>
-        <div class="sel col-lg-2 col-md-4 col-sm-6">
-          <p>Funds Needed</p>
-        </div>
-      </div>
-
-
-      <form class="mapInfoForm" action="" method="post" enctype="plain/text">
+    <div class="body">
+      <div class="supported-bar">
+        Working with and supported by:
         <div class="row">
-
-          <div class="entr col-lg-5 col-md-5">
-            <input class="form-control" type="text" name="zip" id="zipseachmain" placeholder="Enter ZIP:" />
+          <div class="col-6">
+            ICONS HERE
+          </div>
+          <div class="col-6">
+            <center>
+              CLICK BELOW BUTTON HERE
+            </center>
           </div>
 
-          <div class="entr col-lg-5 col-md-5">
-            <input class="form-control" type="text" name="mi-radius" id="radsearchmain" placeholder="Enter radius (mi):" />
-          </div>
-
-          <div class="entr col-lg-2 col-md-2">
-            <input class="search-btn form-control" type="button" name="submitInfo" onclick="subSearch()" value="Submit">
-          </div>
-        </div>
-      </form>
-
-    </div>
-
-  </div>
-
-  <hr />
-
-
-  <div class="body">
-    <div class="supported-bar">
-      Working with and supported by:
-      <div class="row">
-        <div class="col-6">
-          ICONS HERE
-        </div>
-        <div class="col-6">
-          <center>
-            CLICK BELOW BUTTON HERE
-          </center>
         </div>
 
       </div>
 
+      <div class="Mission statement">
+
+        <p class="motviationPar"> </p>
+
+        <p class="unionEffect"> </p>
+      </div>
+
+      <div class="t-feed">
+
+      </div>
     </div>
 
-    <div class="Mission statement">
+    <div id="mapCont">
+      <div id="mapSearchBox">
+        <form id="search">
+          <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
+          <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
 
-      <p class="motviationPar"> </p>
+          <h4 id='action'>Action</h4>
+          <div id='checkholder'></div>
 
-      <p class="unionEffect"> </p>
+          <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
+        </form>
+      </div>
+
+      <div id="map"></div>
     </div>
-
-    <div class="t-feed">
-
-    </div>
-  </div>
-
-  <div id="mapCont">
-    <div id="mapSearchBox">
-      <form id="search">
-        <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
-        <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
-
-        <h4 id='action'>Action</h4>
-        <div id='checkholder'></div>
-
-        <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
-      </form>
-    </div>
-
-    <div id="map"></div>
   </div>
 
   <footer>

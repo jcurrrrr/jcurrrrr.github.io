@@ -172,6 +172,7 @@ body {
   background-color: red;
   z-index: 100;
   min-height: 500px;
+  visibility: hidden;
 }
 
 #map {
