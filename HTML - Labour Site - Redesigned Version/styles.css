@@ -196,8 +196,7 @@ body {
 #mapCont {
   height: 75vh;
   width: 100vw;
-  top: 100vh;
-  position: absolute;
+  position: relative;
   background-color: red;
   z-index: 100;
   min-height: 500px;

@@ -17,40 +17,40 @@
 </head>
 
 <body>
-
-  <div class="navigation">
-    <nav class="navbar navbar-custom navbar-expand-lg">
-      <a class="navbar-brand" href="#">Act Map</a>
-      <div id="toggler">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">☰</span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item mx-4">
-            <a class="nav-link" href="#">List of Actions</a>
-          </li>
-          <li class="nav-item mx-4">
-            <a class="nav-link" href="#">Donate</a>
-          </li>
-          <li class="nav-item mx-4 dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Media
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Twitter</a>
-              <a class="dropdown-item" href="#">Instagram</a>
-              <a class="dropdown-item" href="#">Facebook</a>
-            </div>
-          </li>
-          <li class="nav-item mx-4">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  <div id = "wrap">
+    <div id ="nv" class="navigation">
+      <nav class="navbar navbar-custom navbar-expand-lg">
+        <a class="navbar-brand" href="#">Act Map</a>
+        <div id="toggler">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">☰</span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">List of Actions</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Donate</a>
+            </li>
+            <li class="nav-item mx-4 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Media
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Twitter</a>
+                <a class="dropdown-item" href="#">Instagram</a>
+                <a class="dropdown-item" href="#">Facebook</a>
+              </div>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
 
 
@@ -142,21 +142,22 @@
       </div>
     </div>
 
-    <div id="mapCont">
-      <div id="mapSearchBox">
-        <form id="search">
-          <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
-          <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
+    
+  </div>
+  <div id="mapCont">
+    <div id="mapSearchBox">
+      <form id="search">
+        <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
+        <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
 
-          <h4 id='action'>Action</h4>
-          <div id='checkholder'></div>
+        <h4 id='action'>Action</h4>
+        <div id='checkholder'></div>
 
-          <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
-        </form>
-      </div>
-
-      <div id="map"></div>
+        <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
+      </form>
     </div>
+
+    <div id="map"></div>
   </div>
 
   <footer>
