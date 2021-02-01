@@ -153,6 +153,16 @@ body {
     font-size: 0.8rem;
   }
 
+  .navbar-custom .navbar-nav .nav-link,
+  .navbar-custom .navbar-toggler,
+  .navbar-custom .nav-item .dropdown-item {
+    font-size: 0.8rem;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 0.9rem;
+  }
+
 }
 
 @media (max-width: 576px){
@@ -164,6 +174,16 @@ body {
   }
   .form-control{
     font-size: 0.7rem;
+  }
+
+  .navbar-custom .navbar-nav .nav-link,
+  .navbar-custom .navbar-toggler,
+  .navbar-custom .nav-item .dropdown-item {
+    font-size: 0.7rem;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 0.8rem;
   }
 
 
@@ -178,6 +198,19 @@ body {
   .form-control{
     font-size: 0.5rem;
   }
+
+
+  .navbar-custom .navbar-nav .nav-link,
+  .navbar-custom .navbar-toggler,
+  .navbar-custom .nav-item .dropdown-item {
+    font-size: 0.5rem;
+  }
+
+  .navbar-custom .navbar-brand{
+    font-size: 0.7rem;
+  }
+
+
 
 
 }
