@@ -177,9 +177,7 @@ function bindInfoWindow(marker, jsonEntry) {
 
 
 function subSearch() {
-   mapHeight = $('#tb').height();
-   var mapCont = $('#mapCont');
-   
+   mapHeight = $('#tb').height();   
    document.getElementById('tb').style.display = 'none';
    document.getElementById('mapCont').style.display = 'block';
    //tb.style.visibility = 'hidden';
