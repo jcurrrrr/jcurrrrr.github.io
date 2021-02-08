@@ -285,7 +285,7 @@ body {
   padding-top: 1%;
   padding-left: 5%;
   font-family: 'Oswald', sans-serif;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 .icons {
@@ -295,8 +295,13 @@ body {
 .icon-size {
   padding-left: 5px;
   padding-right: 5px;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
+}
+
+.learn-more{
+  padding-top: 1%;
+  font-size: 2.5vw;
 }
 
 .supported-bar{
