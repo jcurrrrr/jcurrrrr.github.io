@@ -52,8 +52,6 @@
       </nav>
     </div>
 
-
-
     <div id="tb" class="top-banner container-fluid">
       <div class="section-cover">
 
@@ -93,7 +91,7 @@
           <div class="row">
 
             <div class="entr col-lg-5 col-md-5">
-              <input class="form-control" type="text" name="zip" id="zipseachmain" placeholder="Enter ZIP:" />
+              <input class="form-control" type="text" name="zip" id="zipsearchmain" placeholder="Enter ZIP:" />
             </div>
 
             <div class="entr col-lg-5 col-md-5">
@@ -108,6 +106,21 @@
 
       </div>
 
+    </div>
+    <div id="mapCont">
+      <div id="mapSearchBox">
+        <form id="search">
+          <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
+          <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
+  
+          <h4 id='action'>Action</h4>
+          <div id='checkholder'></div>
+  
+          <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
+        </form>
+      </div>
+  
+      <div id="map"></div>
     </div>
 
     <hr />
@@ -144,21 +157,7 @@
 
   </div>
 
-  <div id="mapCont">
-    <div id="mapSearchBox">
-      <form id="search">
-        <input id="zipsearch" class="form-control" type="text" name="Full Name" placeholder="enter zip" style="margin-bottom: 10px;">
-        <input id="radsearch" class="form-control" type="text" name="Full Name" placeholder="enter radius (mi)" style="margin-bottom: 10px;">
-
-        <h4 id='action'>Action</h4>
-        <div id='checkholder'></div>
-
-        <button class="search-btn form-control" type="button" style="margin-top: 10px;" id='searchbutton' onclick="subSearch()">search</button>
-      </form>
-    </div>
-
-    <div id="map"></div>
-  </div>
+  
 
   <footer>
 

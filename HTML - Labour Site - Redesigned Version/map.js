@@ -177,28 +177,39 @@ function bindInfoWindow(marker, jsonEntry) {
 
 
 function subSearch() {
+   mapHeight = $('#tb').height();
    var mapCont = $('#mapCont');
-   var tb = $('#tb');
-   tb.style.visibility = 'hidden';
-   mapCont.style.visibility = 'visible';
+   
+   document.getElementById('tb').style.display = 'none';
+   document.getElementById('mapCont').style.display = 'block';
+   //tb.style.visibility = 'hidden';
+   //mapCont.style.visibility = 'visible';
    //mapCont.style.top =(navHeight.toString() + 'px');
    
-   if ((zipcode = $('#zipsearch').val()) || (zipcode = $('#zipsearchmain').val())) {
+   if ((zipcode = $('#zipsearch').val())) {
+      currzip = zipcode;
+      loclatlng = null;
+   } else if (zipcode = $('#zipsearchmain').val()) {
       currzip = zipcode;
       loclatlng = null;
    }
-   if ((radius = parseInt(zipcode = $('#zipsearchmain').val())) || (radius = parseInt($('#radsearch').val()))) {
+
+   if ((radius = parseInt(zipcode = $('#radsearch').val()))) {
+      currrad = radius * 1609.34;
+   } else if (radius = parseInt($('#radsearchmain').val())) {
       currrad = radius * 1609.34;
    }
 
    for (let i = 0; i < markers.length; i++) {
       markers[i].setMap(null);
    }
+
    markers = [];
    if (currcircle) {
       currcircle.setMap(null);
       currcircle = null;
    }
+
    addPoints(currzip, currrad);
    return false;
 };
