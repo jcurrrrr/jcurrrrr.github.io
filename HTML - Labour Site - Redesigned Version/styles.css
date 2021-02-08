@@ -247,6 +247,10 @@ body {
   background-color: #e65c00;
 }
 
+#tb {
+  visibility: none;
+}
+
 #mapCont {
   height: 75vh;
   width: 100vw;

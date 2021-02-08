@@ -177,11 +177,10 @@ function bindInfoWindow(marker, jsonEntry) {
 
 
 function subSearch() {
-
    var mapCont = $('#mapCont');
-   var nav = $('#nv');
-   mapCont.css("visibility", "visible");
-   $('#wrap').insertBefore(mapCont, nav);
+   var tb = $('#tb');
+   tb.style.visibility = 'hidden';
+   mapCont.style.visibility = 'visible';
    //mapCont.style.top =(navHeight.toString() + 'px');
    
    if ((zipcode = $('#zipsearch').val()) || (zipcode = $('#zipsearchmain').val())) {
