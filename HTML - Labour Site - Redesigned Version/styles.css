@@ -77,7 +77,6 @@ body {
   position: relative;
   height: 75vh;
   min-height: 500px;
-  margin-bottom: 10px;
   background-image: url("8888s-Strike.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -221,8 +220,6 @@ body {
 .sel{
   height: 20px;
   color: white;
-  padding-left: 3%;
-  padding-right:3%;
 }
 
 .sel:hover{
@@ -281,18 +278,38 @@ body {
   border-radius: 10px;
 }
 
-.body{
-  padding-left: 3%;
-  padding-right: 3%;
-}
+
 
 .search {
   display: block;
 }
 
+.working-text{
+  padding-top: 1%;
+  padding-left: 5%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5vw;
+}
+
+.icons {
+  padding-left: 3%;
+}
+
+.icon-size {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 48px;
+  height: 48px;
+}
+
+.learn-more{
+  padding-top: 1%;
+  font-size: 2.5vw;
+}
+
 .supported-bar{
   height: 25vh;
-  background-color: yellow;
+  background-color: rgb(240 , 240, 240);
 }
 
 input {
