@@ -164,6 +164,15 @@ body {
     font-size: 0.9rem;
   }
 
+  .working-text{
+    font-size: 15px;
+  }
+
+  .icon-size{
+    height: 24px;
+    width: 24px;
+  }
+
 }
 
 @media (max-width: 576px){
@@ -185,6 +194,15 @@ body {
 
   .navbar-custom .navbar-brand {
     font-size: 0.8rem;
+  }
+
+  .working-text{
+    font-size: 10px;
+  }
+
+  .icon-size{
+    height: 50px;
+    width:50px;
   }
 
 
@@ -209,6 +227,15 @@ body {
 
   .navbar-custom .navbar-brand{
     font-size: 0.7rem;
+  }
+
+  .working-text{
+    font-size: 8px;
+  }
+
+  .icon-size{
+    height: 15px;
+    width:15px;
   }
 
 
@@ -288,7 +315,7 @@ body {
   padding-top: 1%;
   padding-left: 5%;
   font-family: 'Oswald', sans-serif;
-  font-size: 2.5vw;
+  font-size: 20px;
 }
 
 .icons {
@@ -304,11 +331,10 @@ body {
 
 .learn-more{
   padding-top: 1%;
-  font-size: 2.5vw;
+  font-size: 36px;
 }
 
 .supported-bar{
-  height: 25vh;
   background-color: rgb(240 , 240, 240);
 }
 
